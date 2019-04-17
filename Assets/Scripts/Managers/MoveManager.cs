@@ -32,7 +32,7 @@ namespace Manager
         }
         void DragBlock()
         {
-            // BeganDrag
+            // Drag.Began
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 startTouch = Input.GetTouch(0).position;
@@ -40,7 +40,7 @@ namespace Manager
                 SelectBlock();
             }
 
-            // EndedDrag
+            // Drag.Ended
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 if (selectBlock == null)
@@ -49,8 +49,9 @@ namespace Manager
                 endTouch = Input.GetTouch(0).position;
                 if (currentDirection.Equals(Direction.None))
                 {
-                    if (endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive)
+                    if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive) && LevelManager.Instance.resource >= LevelManager.Instance.priceMovig)
                     {
+                        LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceMovig);
                         dragDistance = endTouch.x - startTouch.x;
                         SetSelectBlocks(Direction.MoveToX);
                         currentDirection = Direction.MoveToX;
@@ -58,8 +59,9 @@ namespace Manager
                         ChangePositionX(dragDistance);
                         StartCoroutine(CMoveHorizontal(dragDistance));
                     }
-                    else if (endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive)
+                    else if ((endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive) && LevelManager.Instance.resource >= LevelManager.Instance.priceMovig)
                     {
+                        LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceMovig);
                         dragDistance = endTouch.y - startTouch.y;
                         SetSelectBlocks(Direction.MoveToY);
                         currentDirection = Direction.MoveToY;
@@ -69,7 +71,7 @@ namespace Manager
                     }
                     else
                     {
-                        selectBlock.MixCheck();
+                        selectBlock.ClickBlock();
                         return;
                     }
                 }

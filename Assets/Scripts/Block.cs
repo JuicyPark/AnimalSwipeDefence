@@ -18,22 +18,32 @@ namespace Map
         public int animalIndex;
         public int animalLevel;
 
-        public void MixCheck()
+        public void ClickBlock()
         {
             if (blockType.Equals(Type.Player))
+                ClickPlayerBlock();
+            else if (blockType.Equals(Type.None) && LevelManager.Instance.resource >= LevelManager.Instance.priceAnimal)
+                ClickNoneBlock();
+        }
+
+        void ClickPlayerBlock()
+        {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f, blockLayerMask);
+            foreach (Collider hit in hitColliders)
             {
-                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f, blockLayerMask);
-                foreach (Collider hit in hitColliders)
+                Block targetBlock = hit.GetComponent<Block>();
+                if (!transform.name.Equals(hit.transform.name) && targetBlock.blockType.Equals(blockType)
+                    && targetBlock.animalLevel.Equals(animalLevel) && targetBlock.animalIndex.Equals(animalIndex))
                 {
-                    Block targetBlock = hit.GetComponent<Block>();
-                    if (!transform.name.Equals(hit.transform.name) && targetBlock.blockType.Equals(blockType)
-                        && targetBlock.animalLevel.Equals(animalLevel) && targetBlock.animalIndex.Equals(animalIndex))
-                    { 
-                        MixBlock(targetBlock);
-                        return;
-                    }
+                    MixBlock(targetBlock);
+                    return;
                 }
             }
+        }
+
+        void ClickNoneBlock()
+        {
+            // TODO : 동물 생산
         }
 
         void MixBlock(Block targetBlock)
