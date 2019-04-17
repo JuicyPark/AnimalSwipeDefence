@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DCJunsu.Tools
+namespace Service
 {
 	/// <summary>
 	/// Singleton pattern.

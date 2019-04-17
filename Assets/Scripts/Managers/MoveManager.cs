@@ -2,31 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Map;
+using Service;
 
 namespace Manager
 {
-    public class MoveManager : MonoBehaviour
+    public class MoveManager : Singleton<MoveManager>
     {
         enum Direction { None, MoveToX, MoveToY }
+        Direction currentDirection = Direction.None;
 
         Vector2 startTouch;
         Vector2 endTouch;
         Vector2 moveTouch;
+        Block[] selectBlocks = new Block[7];
         int blockNumber = 49;
         float dragDistance;
 
-        [SerializeField]
-        Block selectBlock;
-        [SerializeField]
-        Block[] selectBlocks = new Block[7];
-        [SerializeField]
-        Block[] blocks;
-        [SerializeField]
-        Transform field;
+        [SerializeField] Block selectBlock;
+        [SerializeField] Transform field;
+        [SerializeField] Block[] blocks;
 
-        Direction currentDirection = Direction.None;
-
-        public float touchSenstive = 50f;
+        public event System.Action onMove;
+        public float touchSenstive;
+        public float moveDelay = 0.005f;
 
         void Update()
         {
@@ -68,6 +66,11 @@ namespace Manager
                         dragDistance = Normalize(dragDistance);
                         ChangePositionY(dragDistance);
                         StartCoroutine(CMoveVertical(dragDistance));
+                    }
+                    else
+                    {
+                        selectBlock.MixCheck();
+                        return;
                     }
                 }
                 selectBlock = null;
@@ -167,37 +170,29 @@ namespace Manager
         IEnumerator CMoveHorizontal(float direction)
         {
             float distance = 10f * direction;
-            float delay = 0.005f;
-
             for (int i = 0; i < 10; i++)
             {
-                yield return new WaitForSeconds(delay);
+                yield return new WaitForSeconds(moveDelay);
                 transform.Translate(1 / distance, 0, 0);
             }
             for (int i = 0; i < selectBlocks.Length; i++)
-            {
                 selectBlocks[i].transform.SetParent(field);
-                selectBlocks[i] = null;
-            }
             currentDirection = Direction.None;
+            onMove?.Invoke();
         }
 
         IEnumerator CMoveVertical(float direction)
         {
             float distance = 10f * direction;
-            float delay = 0.005f;
-
             for (int i = 0; i < 10; i++)
             {
-                yield return new WaitForSeconds(delay);
+                yield return new WaitForSeconds(moveDelay);
                 transform.Translate(0, 0, 1 / distance);
             }
             for (int i = 0; i < selectBlocks.Length; i++)
-            {
                 selectBlocks[i].transform.SetParent(field);
-                selectBlocks[i] = null;
-            }
             currentDirection = Direction.None;
+            onMove?.Invoke();
         }
     }
 }
