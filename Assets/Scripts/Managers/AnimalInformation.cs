@@ -10,6 +10,7 @@ namespace Manager
     public class Level
     {
         public Sprite[] animalSprite;
+        public GameObject[] animalObject;
     }
     public class AnimalInformation : Singleton<AnimalInformation>
     {

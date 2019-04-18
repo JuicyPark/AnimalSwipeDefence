@@ -21,8 +21,8 @@ namespace Manager
 
         void Initialize()
         {
-            LevelManager.Instance.onclearLevel += ReviseLevelUI;
-            LevelManager.Instance.onclearLevel += ReviseResourceUI;
+            LevelManager.Instance.onClearLevel += ReviseLevelUI;
+            LevelManager.Instance.onClearLevel += ReviseResourceUI;
             BlockManager.Instance.onMove += ReviseResourceUI;
             ClickManager.Instance.onClick += ReviseResourceUI;
             ClickManager.Instance.onClick += ReviseSuppliesUI;

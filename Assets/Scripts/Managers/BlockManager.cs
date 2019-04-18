@@ -20,6 +20,9 @@ namespace Manager
         [SerializeField] Transform field;
         [SerializeField] Block[] blocks;
 
+        public List<Block> animalBlock = new List<Block>();
+        public List<GameObject> animalObject = new List<GameObject>();
+
         public Block selectBlock { get; private set; }
         public LayerMask blockLayerMask = 1 << 8;
         public event System.Action onMove;
@@ -28,7 +31,8 @@ namespace Manager
 
         void Update()
         {
-            DragBlock();
+            if(LevelManager.Instance.currentState.Equals(LevelManager.LevelState.Ready))
+                DragBlock();
         }
         void DragBlock()
         {
@@ -167,6 +171,15 @@ namespace Manager
                     }
                 }
             }
+        }
+
+        public void AnimalSpawn()
+        {
+            // TODO : 애니메이션 y값 0에서 슬며서 1까지 올라오도록
+
+            for(int i = 0;i<animalBlock.Count;i++)
+                animalObject.Add(Instantiate(AnimalInformation.Instance.level[animalBlock[i].animalLevel].animalObject[animalBlock[i].animalIndex]
+                    ,new Vector3(animalBlock[i].positionX,0, animalBlock[i].positionY),Quaternion.identity));
         }
 
         IEnumerator CMoveHorizontal(float direction)

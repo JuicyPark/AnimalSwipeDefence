@@ -31,6 +31,7 @@ namespace Manager
                 LevelManager.Instance.IncreaseSupply();
                 LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceAnimal);
                 BlockManager.Instance.selectBlock.blockType = Block.Type.Player;
+                BlockManager.Instance.animalBlock.Add(BlockManager.Instance.selectBlock);
                 CreateAnimal();
             }
             onClick?.Invoke();
@@ -52,6 +53,7 @@ namespace Manager
             targetBlock.animalIndex = 0;
             targetBlock.blockType = Block.Type.None;
             targetBlock._spriteRenderer.sprite = AnimalInformation.Instance.noneSprite;
+            BlockManager.Instance.animalBlock.Remove(targetBlock);
             onClick?.Invoke();
         }
     }
