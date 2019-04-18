@@ -7,11 +7,9 @@ namespace Map
 {
     public class Block : MonoBehaviour
     {
-        enum Type { None, Player, Enemy }
-        LayerMask blockLayerMask = 1 << 8;
-
-        [SerializeField] Type blockType;
-
+        public enum Type { None, Player, Enemy }
+        public Type blockType;
+        
         public SpriteRenderer _spriteRenderer;
         public int positionX;
         public int positionY;
@@ -21,41 +19,12 @@ namespace Map
         public void ClickBlock()
         {
             if (blockType.Equals(Type.Player))
-                ClickPlayerBlock();
-            else if (blockType.Equals(Type.None) && LevelManager.Instance.resource >= LevelManager.Instance.priceAnimal)
-                ClickNoneBlock();
-        }
-
-        void ClickPlayerBlock()
-        {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f, blockLayerMask);
-            foreach (Collider hit in hitColliders)
             {
-                Block targetBlock = hit.GetComponent<Block>();
-                if (!transform.name.Equals(hit.transform.name) && targetBlock.blockType.Equals(blockType)
-                    && targetBlock.animalLevel.Equals(animalLevel) && targetBlock.animalIndex.Equals(animalIndex))
-                {
-                    MixBlock(targetBlock);
-                    return;
-                }
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f, BlockManager.Instance.blockLayerMask);
+                ClickManager.Instance.ClickPlayerBlock(hitColliders);
             }
-        }
-
-        void ClickNoneBlock()
-        {
-            // TODO : 동물 생산
-        }
-
-        void MixBlock(Block targetBlock)
-        {
-            animalLevel++;
-            animalIndex = Random.Range(0, AnimalInformation.Instance.level[animalLevel].animalSprite.Length);
-            _spriteRenderer.sprite = AnimalInformation.Instance.level[animalLevel].animalSprite[animalIndex];
-
-            targetBlock.animalLevel = 0;
-            targetBlock.animalIndex = 0;
-            targetBlock.blockType = Type.None;
-            targetBlock._spriteRenderer.sprite = AnimalInformation.Instance.noneSprite;
+            else if (blockType.Equals(Type.None))
+                ClickManager.Instance.ClickNoneBlock();
         }
     }
 }

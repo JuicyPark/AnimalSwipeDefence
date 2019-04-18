@@ -12,6 +12,8 @@ namespace Manager
         [SerializeField] Text resourceText;
         [SerializeField] Text suppliesText;
 
+        public int maxSupplies = 15;
+
         void Start()
         {
             Initialize();
@@ -21,11 +23,13 @@ namespace Manager
         {
             LevelManager.Instance.onclearLevel += ReviseLevelUI;
             LevelManager.Instance.onclearLevel += ReviseResourceUI;
-            MoveManager.Instance.onMove += ReviseResourceUI;
+            BlockManager.Instance.onMove += ReviseResourceUI;
+            ClickManager.Instance.onClick += ReviseResourceUI;
+            ClickManager.Instance.onClick += ReviseSuppliesUI;
         }
 
         void ReviseLevelUI() => levelText.text = LevelManager.Instance.level.ToString();
         void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString();
-        void ReviseSuppliesUI() => suppliesText.text = LevelManager.Instance.supplies.ToString();
+        void ReviseSuppliesUI() => suppliesText.text = LevelManager.Instance.supplies.ToString() +" / "+ maxSupplies.ToString();
     }
 }

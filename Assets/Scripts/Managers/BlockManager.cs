@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Map;
 using Service;
+using Map;
 
 namespace Manager
 {
-    public class MoveManager : Singleton<MoveManager>
+    public class BlockManager : Singleton<BlockManager>
     {
         enum Direction { None, MoveToX, MoveToY }
         Direction currentDirection = Direction.None;
-
         Vector2 startTouch;
         Vector2 endTouch;
         Vector2 moveTouch;
@@ -18,10 +17,11 @@ namespace Manager
         int blockNumber = 49;
         float dragDistance;
 
-        [SerializeField] Block selectBlock;
         [SerializeField] Transform field;
         [SerializeField] Block[] blocks;
 
+        public Block selectBlock { get; private set; }
+        public LayerMask blockLayerMask = 1 << 8;
         public event System.Action onMove;
         public float touchSenstive;
         public float moveDelay = 0.005f;

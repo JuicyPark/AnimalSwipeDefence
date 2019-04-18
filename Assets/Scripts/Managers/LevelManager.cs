@@ -38,7 +38,9 @@ namespace Manager
         }
 
         void IncreaseLevel() => level++;
-        void IncreaseResource() => resource += rewardResource;
+        public void IncreaseResource() => resource += rewardResource;
         public void DecreaseResource(int value) => resource -= value;
+        public void IncreaseSupply() => supplies++;
+        public void DecreaseSupply() => supplies--;
     }
 }
