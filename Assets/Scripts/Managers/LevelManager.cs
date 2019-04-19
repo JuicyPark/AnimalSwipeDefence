@@ -32,7 +32,7 @@ namespace Manager
             level = 1;
             resource = 20;
             supplies = 0;
-
+            
             onClearLevel += IncreaseLevel;
             onClearLevel += IncreaseResource;
         }

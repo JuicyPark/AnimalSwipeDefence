@@ -15,7 +15,7 @@ namespace Manager
             foreach (Collider hit in hitColliders)
             {
                 Block targetBlock = hit.GetComponent<Block>();
-                if (!BlockManager.Instance.selectBlock.transform.name.Equals(hit.transform.name) && targetBlock.blockType.Equals(BlockManager.Instance.selectBlock.blockType)
+                if (BlockManager.Instance.selectBlock.animalLevel<AnimalInformation.Instance.level.Length && !BlockManager.Instance.selectBlock.transform.name.Equals(hit.transform.name) && targetBlock.blockType.Equals(BlockManager.Instance.selectBlock.blockType)
                     && targetBlock.animalLevel.Equals(BlockManager.Instance.selectBlock.animalLevel) && targetBlock.animalIndex.Equals(BlockManager.Instance.selectBlock.animalIndex))
                 {
                     MixBlock(targetBlock);
