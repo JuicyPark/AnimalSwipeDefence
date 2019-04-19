@@ -8142,8 +8142,31 @@ MonoBehaviour:
     - {fileID: 3274895258878573015, guid: 29fadc330fa643d4b9a28860ff2f25ed, type: 3}
     - {fileID: 4624213889119735471, guid: 395da4cef49316148a6754b87ee58577, type: 3}
   - animalSprite:
-    - {fileID: 21300000, guid: fe2764e3be40939469e2f83f24b4e62a, type: 3}
-    - {fileID: 21300000, guid: 6a7d2dde004955949b1ec2a3b10faaaa, type: 3}
+    - {fileID: 21300000, guid: edfe60863ba1020449c6710dd3225350, type: 3}
+    - {fileID: 21300000, guid: 72cc5f03fc4304649acd60fecc144353, type: 3}
+    - {fileID: 21300000, guid: 71e9abfde98ac7040a81a7c37e1a9b77, type: 3}
+    - {fileID: 21300000, guid: 8561a0825e60af346a904705ab6acc05, type: 3}
+    - {fileID: 21300000, guid: 124c3d3208739904bab5f2355b1a94c8, type: 3}
+    - {fileID: 21300000, guid: 6ea686adf5b07404188c14631f65fdaf, type: 3}
+    - {fileID: 21300000, guid: 4351d0a9a26755042902c4e11d14c9da, type: 3}
+    animalObject: []
+  - animalSprite:
+    - {fileID: 21300000, guid: 08ab0ef07b25b4d47aa87cd92e154b96, type: 3}
+    - {fileID: 21300000, guid: e97b9ebbb9f3d0744b4d8d9db12bbce4, type: 3}
+    - {fileID: 21300000, guid: b8d091d0aef7dc54ca2f1320b0f801fd, type: 3}
+    - {fileID: 21300000, guid: b6ac2a1dcf9f5af4e9c59a3fcbeb8ef8, type: 3}
+    - {fileID: 21300000, guid: efd848d3d46b7f5419800a84b78e5584, type: 3}
+    - {fileID: 21300000, guid: e4b30864371ee424185ca4321db4e568, type: 3}
+    - {fileID: 21300000, guid: 017b3d63b0fdb9b4ab1f77b5ecad33a3, type: 3}
+    animalObject: []
+  - animalSprite:
+    - {fileID: 21300000, guid: 50da98349a929614aaf9a8b47969abf2, type: 3}
+    - {fileID: 21300000, guid: bf535a5c263de1d4190db2c43c4d0705, type: 3}
+    - {fileID: 21300000, guid: 6c783b50c2bfd8a478850accb7ca2ae3, type: 3}
+    - {fileID: 21300000, guid: b9c675e7d7fe7864eb54ecaea1c82873, type: 3}
+    - {fileID: 21300000, guid: cc43c7ccdc74c024f984157830ce5cf6, type: 3}
+    - {fileID: 21300000, guid: 30684b265e89ba641a9b7b3b37172c45, type: 3}
+    - {fileID: 21300000, guid: 4e87da1ece999884b99b8b2ccdb7332e, type: 3}
     animalObject: []
   noneSprite: {fileID: 21300000, guid: 4c7a8c65cb4be754bbbcdb5964afc208, type: 3}
 --- !u!4 &2114537407
