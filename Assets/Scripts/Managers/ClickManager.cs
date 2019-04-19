@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Service;
-using Map;
+using InGame;
 
 namespace Manager
 {

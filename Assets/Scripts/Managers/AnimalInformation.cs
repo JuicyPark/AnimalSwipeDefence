@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Service;
-using UnityEngine.UI;
 
 namespace Manager
 {

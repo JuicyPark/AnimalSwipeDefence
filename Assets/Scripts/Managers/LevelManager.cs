@@ -18,6 +18,7 @@ namespace Manager
         public int rewardResource = 10;
         public int priceAnimal = 3;
         public int priceMovig = 1;
+        public int life = 30;
 
         public event System.Action onClearLevel;
         public event System.Action onStartLevel;

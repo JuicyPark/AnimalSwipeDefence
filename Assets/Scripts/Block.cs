@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Manager;
 
-namespace Map
+namespace InGame
 {
     public class Block : MonoBehaviour
     {
