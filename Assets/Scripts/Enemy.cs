@@ -18,9 +18,6 @@ namespace InGame
         {
             transform.Translate(0, 0, speed * Time.deltaTime);
         }
-        // TODO : 이동
-
-
         // TODO : 체력
     }
 }

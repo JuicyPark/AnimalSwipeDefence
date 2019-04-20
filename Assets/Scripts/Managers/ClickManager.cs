@@ -8,8 +8,6 @@ namespace Manager
 {
     public class ClickManager : Singleton<ClickManager>
     {
-        public event System.Action onClick;
-
         public void ClickPlayerBlock(Collider[] hitColliders)
         {
             foreach (Collider hit in hitColliders)
@@ -28,13 +26,12 @@ namespace Manager
         {
             if (LevelManager.Instance.resource >= LevelManager.Instance.priceAnimal)
             {
-                LevelManager.Instance.IncreaseSupply();
                 LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceAnimal);
                 BlockManager.Instance.selectBlock.blockType = Block.Type.Player;
                 BlockManager.Instance.animalBlock.Add(BlockManager.Instance.selectBlock);
                 CreateAnimal();
             }
-            onClick?.Invoke();
+            EventManager.Instance.onClickInvoke();
         }
 
         void CreateAnimal()
@@ -45,7 +42,6 @@ namespace Manager
 
         void MixBlock(Block targetBlock)
         {
-            LevelManager.Instance.DecreaseSupply();
             BlockManager.Instance.selectBlock.animalLevel++;
             CreateAnimal();
 
@@ -54,7 +50,7 @@ namespace Manager
             targetBlock.blockType = Block.Type.None;
             targetBlock._spriteRenderer.sprite = AnimalInformation.Instance.noneSprite;
             BlockManager.Instance.animalBlock.Remove(targetBlock);
-            onClick?.Invoke();
+            EventManager.Instance.onClickInvoke();
         }
     }
 }

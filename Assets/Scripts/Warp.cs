@@ -13,21 +13,16 @@ namespace InGame
 
         void OnTriggerEnter(Collider collider)
         {
-            if(type.Equals(warpType.In))
+            if(!type.Equals(warpType.Finish))
             {
                 collider.transform.position = targetPosition.position;
-                collider.transform.rotation = Quaternion.Euler(0, targetPosition.eulerAngles.y, 0);
+                collider.transform.rotation = Quaternion.Euler(0, targetPosition.parent.eulerAngles.y, 0);
             }
-            else if(type.Equals(warpType.Finish))
+            else
             {
                 LevelManager.Instance.life--;
                 Destroy(collider.gameObject);
             }
-        }
-
-        void Start()
-        {
-            Debug.Log(targetPosition.eulerAngles.y);
         }
     }
 }

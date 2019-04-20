@@ -21,15 +21,16 @@ namespace Manager
 
         void Initialize()
         {
-            LevelManager.Instance.onClearLevel += ReviseLevelUI;
-            LevelManager.Instance.onClearLevel += ReviseResourceUI;
-            BlockManager.Instance.onMove += ReviseResourceUI;
-            ClickManager.Instance.onClick += ReviseResourceUI;
-            ClickManager.Instance.onClick += ReviseSuppliesUI;
+            EventManager.Instance.onClearLevel += ReviseLevelUI;
+            EventManager.Instance.onClearLevel += ReviseResourceUI;
+            EventManager.Instance.onClearLevel += ReviseWalkUI;
+            EventManager.Instance.onMove += ReviseResourceUI;
+            EventManager.Instance.onMove += ReviseWalkUI;
+            EventManager.Instance.onClick += ReviseResourceUI;
         }
 
         void ReviseLevelUI() => levelText.text = LevelManager.Instance.level.ToString();
         void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString();
-        void ReviseSuppliesUI() => suppliesText.text = LevelManager.Instance.supplies.ToString() +" / "+ maxSupplies.ToString();
+        void ReviseWalkUI() => suppliesText.text = LevelManager.Instance.walk.ToString();
     }
 }

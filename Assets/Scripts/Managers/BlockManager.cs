@@ -21,11 +21,10 @@ namespace Manager
         [SerializeField] Block[] blocks;
 
         public List<Block> animalBlock = new List<Block>();
-        public List<GameObject> animalObject = new List<GameObject>();
+        public Queue<GameObject> animalObject = new Queue<GameObject>();
 
         public Block selectBlock { get; private set; }
         public LayerMask blockLayerMask = 1 << 8;
-        public event System.Action onMove;
         public float touchSenstive;
         public float moveDelay = 0.005f;
 
@@ -53,9 +52,9 @@ namespace Manager
                 endTouch = Input.GetTouch(0).position;
                 if (currentDirection.Equals(Direction.None))
                 {
-                    if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive) && LevelManager.Instance.resource >= LevelManager.Instance.priceMovig)
+                    if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive) && LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
                     {
-                        LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceMovig);
+                        LevelManager.Instance.DecreaseWalk();
                         dragDistance = endTouch.x - startTouch.x;
                         SetSelectBlocks(Direction.MoveToX);
                         currentDirection = Direction.MoveToX;
@@ -63,9 +62,9 @@ namespace Manager
                         ChangePositionX(dragDistance);
                         StartCoroutine(CMoveHorizontal(dragDistance));
                     }
-                    else if ((endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive) && LevelManager.Instance.resource >= LevelManager.Instance.priceMovig)
+                    else if ((endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive) && LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
                     {
-                        LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceMovig);
+                        LevelManager.Instance.DecreaseWalk();
                         dragDistance = endTouch.y - startTouch.y;
                         SetSelectBlocks(Direction.MoveToY);
                         currentDirection = Direction.MoveToY;
@@ -175,11 +174,11 @@ namespace Manager
 
         public void AnimalSpawn()
         {
-            // TODO : 애니메이션 y값 0에서 슬며서 1까지 올라오도록
-
-            for(int i = 0;i<animalBlock.Count;i++)
-                animalObject.Add(Instantiate(AnimalInformation.Instance.level[animalBlock[i].animalLevel].animalObject[animalBlock[i].animalIndex]
-                    ,new Vector3(animalBlock[i].positionX,0, animalBlock[i].positionY),Quaternion.identity));
+            for (int i = 0; i < animalBlock.Count; i++)
+            {
+                animalObject.Enqueue(Instantiate(AnimalInformation.Instance.level[animalBlock[i].animalLevel].animalObject[animalBlock[i].animalIndex]
+                        , new Vector3(animalBlock[i].positionX, 0, animalBlock[i].positionY), Quaternion.identity));
+            }
         }
 
         IEnumerator CMoveHorizontal(float direction)
@@ -193,7 +192,7 @@ namespace Manager
             for (int i = 0; i < selectBlocks.Length; i++)
                 selectBlocks[i].transform.SetParent(field);
             currentDirection = Direction.None;
-            onMove?.Invoke();
+            EventManager.Instance.onMoveInvoke();
         }
 
         IEnumerator CMoveVertical(float direction)
@@ -207,7 +206,7 @@ namespace Manager
             for (int i = 0; i < selectBlocks.Length; i++)
                 selectBlocks[i].transform.SetParent(field);
             currentDirection = Direction.None;
-            onMove?.Invoke();
+            EventManager.Instance.onMoveInvoke();
         }
     }
 }
