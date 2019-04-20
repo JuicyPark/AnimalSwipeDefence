@@ -529,6 +529,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8543045367873386014, guid: 7cabe2baa5a86b247b43c021e54035b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5111513553523172633, guid: 7cabe2baa5a86b247b43c021e54035b6,
         type: 3}
       propertyPath: type
@@ -827,6 +832,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543045367873386014, guid: 7cabe2baa5a86b247b43c021e54035b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5111513553523172633, guid: 7cabe2baa5a86b247b43c021e54035b6,
         type: 3}
@@ -2602,6 +2612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543045367873386014, guid: 7cabe2baa5a86b247b43c021e54035b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5111513553523172633, guid: 7cabe2baa5a86b247b43c021e54035b6,
         type: 3}
@@ -4538,7 +4553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyObject: {fileID: 9116524688655638952, guid: 37de5dd90c7c96a4db651966d3cd7915,
     type: 3}
-  enemyNumber: 20
+  enemyNumber: 5
   delayTime: 2
   warpPosition:
   - {fileID: 2052906526}
@@ -5783,6 +5798,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8543045367873386014, guid: 7cabe2baa5a86b247b43c021e54035b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5111513553523172633, guid: 7cabe2baa5a86b247b43c021e54035b6,
         type: 3}
       propertyPath: type
@@ -6606,6 +6626,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543045367873386014, guid: 7cabe2baa5a86b247b43c021e54035b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5111513553523172633, guid: 7cabe2baa5a86b247b43c021e54035b6,
         type: 3}

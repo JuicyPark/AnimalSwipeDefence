@@ -14,10 +14,18 @@ namespace InGame
             Move();
         }
 
-        void Move()
+        void Move() => transform.Translate(0, 0, speed * Time.deltaTime);
+
+        public void Damage(int damage)
         {
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            health -= damage;
+            HealthCheck();
         }
-        // TODO : 체력
+
+        void HealthCheck()
+        {
+            if (health <= 0)
+                Destroy(gameObject);
+        }
     }
 }
