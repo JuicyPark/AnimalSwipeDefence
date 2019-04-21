@@ -20,7 +20,7 @@ namespace InGame
             }
             else
             {
-                LevelManager.Instance.life--;
+                EventManager.Instance.onMissMonsterInvoke();
                 Destroy(collider.gameObject);
             }
         }

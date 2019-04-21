@@ -41,10 +41,10 @@ namespace InGame
         {
             for (int i = 0; i < enemyNumber; i++)
             {
+                yield return new WaitForSeconds(delayTime);
                 GameObject enemy = Instantiate(enemyObject, warpPosition[0].position, 
                     Quaternion.Euler(0, warpPosition[0].eulerAngles.y, 0));
                 enemy.transform.SetParent(transform);
-                yield return new WaitForSeconds(delayTime);
             }
             isAllSpawn = true;
         }

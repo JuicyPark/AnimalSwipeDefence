@@ -2,25 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Service;
+using UnityEngine.UI;
 
 namespace Manager
 {
     public class LevelManager : Singleton<LevelManager>
     {
         [SerializeField] Animator _cameraAnimator;
-        [SerializeField] Animator _BottomPanelAnimator;
-
-        public int level { get; private set; }
-        public int resource { get; private set; }
-        public int walk { get; private set; }
-
+        [SerializeField] Animator _bottomPanelAnimator;
+        [SerializeField] Image _lifeBar;
         public enum LevelState { Ready, Battle }
-        public LevelState currentState = LevelState.Ready;
-        public int rewardResource = 10;
-        public int rewardWalk = 10;
+
+        [Header("레벨")]
+        public int level = 0;
+
+        [Header("자원")]
+        public int resource = 20;
         public int priceAnimal = 3;
+        public int rewardResource = 10;
+
+        [Header("이동")]
+        public int walk = 10;
         public int priceWalk = 1;
+        public int rewardWalk = 10;
+        public int maxWalk = 20;
+
+        [Header("상태")]
         public int life = 30;
+        public int maxLife = 30;
+        public LevelState currentState = LevelState.Ready;
 
         void Start()
         {
@@ -29,38 +39,49 @@ namespace Manager
 
         void Initialize()
         {
-            level = 0;
-            resource = 20;
-            walk = 10;
-            
             EventManager.Instance.onClearLevel += IncreaseLevel;
             EventManager.Instance.onClearLevel += IncreaseResource;
             EventManager.Instance.onClearLevel += IncreaseWalk;
+            EventManager.Instance.onClearLevel += OnReady;
+            EventManager.Instance.onMissMonster += DecreaseLife;
+        }
+
+        public void DecreaseLife()
+        {
+            life--;
+            _lifeBar.fillAmount = (float)life/maxLife;
         }
 
         void IncreaseLevel() => level++;
         public void IncreaseResource() => resource += rewardResource;
         public void DecreaseResource(int value) => resource -= value;
-        public void IncreaseWalk() => walk += rewardWalk;
+        public void IncreaseWalk()
+        {
+            walk += rewardWalk;
+            if (walk > 20)
+                walk = 20;
+        }
         public void DecreaseWalk() => walk -= priceWalk;
 
-        public void PressBattle()
+        public void OnBattle()
         {
             if (currentState.Equals(LevelState.Ready))
             {
                 currentState = LevelState.Battle;
                 _cameraAnimator.SetBool("isBattle", true);
-                _BottomPanelAnimator.SetBool("isBattle", true);
+                _bottomPanelAnimator.SetBool("isBattle", true);
                 BlockManager.Instance.AnimalSpawn();
+                EventManager.Instance.onStartLevelInvoke();
             }
         }
-        public void PressReady()
+
+        public void OnReady()
         {
             if (currentState.Equals(LevelState.Battle))
             {
                 currentState = LevelState.Ready;
                 _cameraAnimator.SetBool("isBattle", false);
-                _BottomPanelAnimator.SetBool("isBattle", false);
+                _bottomPanelAnimator.SetBool("isBattle", false);
                 while (BlockManager.Instance.animalObject.Count > 0)
                     Destroy(BlockManager.Instance.animalObject.Dequeue());
             }

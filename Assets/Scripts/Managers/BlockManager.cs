@@ -26,7 +26,7 @@ namespace Manager
         public Block selectBlock { get; private set; }
         public LayerMask blockLayerMask = 1 << 8;
         public float touchSenstive;
-        public float moveDelay = 0.005f;
+        public float moveDelay = 0.001f;
 
         void Update()
         {
