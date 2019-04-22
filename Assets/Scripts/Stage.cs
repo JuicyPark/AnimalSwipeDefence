@@ -11,9 +11,13 @@ namespace InGame
         float delayWarpTime = 0.75f;
         Vector3 defaultDirection = new Vector3(0, 0, 90f);
 
+        [Header("적 정보")]
         [SerializeField] GameObject enemyObject;
         [SerializeField] int enemyNumber;
+        [SerializeField] int health;
+        [Header("스폰 딜레이 시간")]
         [SerializeField] float delayTime;
+        [Header("스테이지 워프 위치")]
         [SerializeField] Transform[] warpPosition;
 
         public void SetWarp() => StartCoroutine(CSetWarp());
@@ -45,6 +49,7 @@ namespace InGame
                 GameObject enemy = Instantiate(enemyObject, warpPosition[0].position, 
                     Quaternion.Euler(0, warpPosition[0].eulerAngles.y, 0));
                 enemy.transform.SetParent(transform);
+                enemy.GetComponent<Enemy>().health = health;
             }
             isAllSpawn = true;
         }
