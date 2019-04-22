@@ -31,8 +31,8 @@ namespace Manager
             EventManager.Instance.onClick += ReviseResourceUI;
         }
 
-        void ReviseLevelUI() => levelText.text = (LevelManager.Instance.level+1).ToString();
-        void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString();
+        void ReviseLevelUI() => levelText.text = "<color=black>Lv.</color> "+(LevelManager.Instance.level+1).ToString();
+        void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString() + "<color=yellow>G</color>";
         void ReviseWalkUI() => suppliesText.text = LevelManager.Instance.walk.ToString() + "/" + LevelManager.Instance.maxWalk.ToString();
     }
 }

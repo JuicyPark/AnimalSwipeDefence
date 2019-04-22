@@ -29,12 +29,12 @@ namespace Manager
                 LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceAnimal);
                 BlockManager.Instance.selectBlock.blockType = Block.Type.Player;
                 BlockManager.Instance.animalBlock.Add(BlockManager.Instance.selectBlock);
-                CreateAnimal();
+                RandomAnimal();
             }
             EventManager.Instance.onClickInvoke();
         }
 
-        void CreateAnimal()
+        void RandomAnimal()
         {
             BlockManager.Instance.selectBlock.animalIndex = Random.Range(0, AnimalInformation.Instance.level[BlockManager.Instance.selectBlock.animalLevel].animalSprite.Length);
             BlockManager.Instance.selectBlock._spriteRenderer.sprite = AnimalInformation.Instance.level[BlockManager.Instance.selectBlock.animalLevel].animalSprite[BlockManager.Instance.selectBlock.animalIndex];
@@ -43,7 +43,7 @@ namespace Manager
         void MixBlock(Block targetBlock)
         {
             BlockManager.Instance.selectBlock.animalLevel++;
-            CreateAnimal();
+            RandomAnimal();
 
             targetBlock.animalLevel = 0;
             targetBlock.animalIndex = 0;
