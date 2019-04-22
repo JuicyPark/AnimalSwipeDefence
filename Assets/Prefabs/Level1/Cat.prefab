@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5990972532493817817}
   - component: {fileID: 454256789089849822}
+  - component: {fileID: 6020627107098928087}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -44,10 +45,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  range: 3
+  damage: 10
+  range: 1
   _animator: {fileID: 3032581792172741650}
   attackAble: 0
+  _enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &6020627107098928087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5990972532493978617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f18a61d526272148b05cf9a6f6f443e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animal: {fileID: 454256789089849822}
+  isSlow: 0
+  slowRate: 0
 --- !u!1 &5990972532493978619
 GameObject:
   m_ObjectHideFlags: 0

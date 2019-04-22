@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1675264252751184010}
   - component: {fileID: 5302994131244836384}
+  - component: {fileID: 8121492360956017217}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Untagged
@@ -156,6 +157,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  range: 3
+  range: 1
   _animator: {fileID: 2206403752328040254}
   attackAble: 0
+  _enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &8121492360956017217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675264252751027370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f18a61d526272148b05cf9a6f6f443e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animal: {fileID: 5302994131244836384}
+  isSlow: 0
+  slowRate: 0

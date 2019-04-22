@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7971835038319405430}
   - component: {fileID: 5598688277801186923}
   - component: {fileID: 4384228976341466129}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: ENEMY
   m_Icon: {fileID: 0}
@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db77673fd870964d916f19ea938fe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 9116524688653647722}
+  freezeMaterial: {fileID: 2100000, guid: b8e1a2fa19d7eb14694943b831f12dae, type: 2}
   health: 250
   speed: 1
 --- !u!1 &9116524688655638954
@@ -88,7 +90,7 @@ GameObject:
   - component: {fileID: 9116524688655416714}
   - component: {fileID: 9116524688654613930}
   - component: {fileID: 9116524688653647722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

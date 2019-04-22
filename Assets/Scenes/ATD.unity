@@ -2918,12 +2918,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &512677947 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1656156499}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,75 +3020,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1001 &525450624
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 608430420}
-    m_Modifications:
-    - target: {fileID: 8606009164251584181, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_Name
-      value: Carp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -230.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -849.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -232.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 81933e95b6838a94cae767d373517d0a, type: 3}
 --- !u!1 &579657106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,38 +3094,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579657106}
   m_CullTransparentMesh: 0
---- !u!1 &608430419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 608430420}
-  m_Layer: 0
-  m_Name: "\uC560\uB2C8\uBA54\uC774\uC158_\uC804\uC6A9_\uD504\uB9AC\uD3A9"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &608430420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608430419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 230.625, y: 849.625, z: 232.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1554485503}
-  - {fileID: 512677947}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609267164
 GameObject:
   m_ObjectHideFlags: 0
@@ -9201,12 +9094,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1554485503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8606009164252007061, guid: 81933e95b6838a94cae767d373517d0a,
-    type: 3}
-  m_PrefabInstance: {fileID: 525450624}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575005738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9686,75 +9573,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1656156499
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 608430420}
-    m_Modifications:
-    - target: {fileID: 34612918228023603, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Chicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -230.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -849.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -232.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 34612918227658003, guid: 3f663650b29a6d6459d1fa6e64bf7d4d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3f663650b29a6d6459d1fa6e64bf7d4d, type: 3}
 --- !u!1 &1661970040
 GameObject:
   m_ObjectHideFlags: 0
@@ -11799,13 +11617,13 @@ MonoBehaviour:
     - {fileID: 21300000, guid: f9f18b89b5f2a224e8e2352a73e1258d, type: 3}
     - {fileID: 21300000, guid: 3025031338b5c684d9319ad13d26d929, type: 3}
     animalObject:
-    - {fileID: 7303991044810682219, guid: 446f3ad83e5bdd94b9ce94a66bfe16fc, type: 3}
-    - {fileID: 4123921452442597306, guid: 20fe835a35a2e5a46a8571718c762f29, type: 3}
-    - {fileID: 8268332177571725119, guid: 62961b82582134b4e85b9d8860d2c8a2, type: 3}
-    - {fileID: 1344596058063925433, guid: f8fa866d724d0e34ea5fc4987920900c, type: 3}
-    - {fileID: 3320540270296097865, guid: aa2b1c6a281863647aa0b1b72e4ec8dd, type: 3}
-    - {fileID: 3274895258878573015, guid: 29fadc330fa643d4b9a28860ff2f25ed, type: 3}
-    - {fileID: 4624213889119735471, guid: 395da4cef49316148a6754b87ee58577, type: 3}
+    - {fileID: 1836202478356008086, guid: 446f3ad83e5bdd94b9ce94a66bfe16fc, type: 3}
+    - {fileID: 3048926230447661063, guid: 20fe835a35a2e5a46a8571718c762f29, type: 3}
+    - {fileID: 8788958140027046174, guid: 62961b82582134b4e85b9d8860d2c8a2, type: 3}
+    - {fileID: 6835242871566261483, guid: f8fa866d724d0e34ea5fc4987920900c, type: 3}
+    - {fileID: 530194294053613116, guid: aa2b1c6a281863647aa0b1b72e4ec8dd, type: 3}
+    - {fileID: 3018768019885716553, guid: 29fadc330fa643d4b9a28860ff2f25ed, type: 3}
+    - {fileID: 6544881118481824427, guid: 395da4cef49316148a6754b87ee58577, type: 3}
   - animalSprite:
     - {fileID: 21300000, guid: edfe60863ba1020449c6710dd3225350, type: 3}
     - {fileID: 21300000, guid: 72cc5f03fc4304649acd60fecc144353, type: 3}
@@ -11814,7 +11632,14 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 124c3d3208739904bab5f2355b1a94c8, type: 3}
     - {fileID: 21300000, guid: 6ea686adf5b07404188c14631f65fdaf, type: 3}
     - {fileID: 21300000, guid: 4351d0a9a26755042902c4e11d14c9da, type: 3}
-    animalObject: []
+    animalObject:
+    - {fileID: 3483568645350598779, guid: b45cb8dfab95160468c3d3ef2cf51a1a, type: 3}
+    - {fileID: 3307562163324085629, guid: 4bb3cb0f8e58f2343a81790753e436d9, type: 3}
+    - {fileID: 8383399363959649396, guid: d0f7d29c3e4184b4484ad2e29130fc29, type: 3}
+    - {fileID: 2656669798187272959, guid: cbc314357ede730468d95c3b99927e90, type: 3}
+    - {fileID: 2726810978502280240, guid: aa3df7c0b0fe12e48b3b9e393009a34a, type: 3}
+    - {fileID: 5305319272822616898, guid: 70759c6d020ef0448971dda344eabc0b, type: 3}
+    - {fileID: 974358974525494081, guid: 841584bba3f181145a6a522fde8e0d1f, type: 3}
   - animalSprite:
     - {fileID: 21300000, guid: 08ab0ef07b25b4d47aa87cd92e154b96, type: 3}
     - {fileID: 21300000, guid: e97b9ebbb9f3d0744b4d8d9db12bbce4, type: 3}
@@ -11823,7 +11648,14 @@ MonoBehaviour:
     - {fileID: 21300000, guid: efd848d3d46b7f5419800a84b78e5584, type: 3}
     - {fileID: 21300000, guid: e4b30864371ee424185ca4321db4e568, type: 3}
     - {fileID: 21300000, guid: 017b3d63b0fdb9b4ab1f77b5ecad33a3, type: 3}
-    animalObject: []
+    animalObject:
+    - {fileID: 7890498191646235812, guid: 29860c17371de9447914e7e9053aec5b, type: 3}
+    - {fileID: 373345767308796588, guid: 1f5cc55fd65326646af74405000de0b9, type: 3}
+    - {fileID: 3683807589038728789, guid: 99b0bab80d8584c48b8c5f47861291d8, type: 3}
+    - {fileID: 1425605433697577901, guid: 54f8bfb3b7020e64ea9b3352a47d61df, type: 3}
+    - {fileID: 7462233143572560055, guid: 4a5bcbc5b837e3e4ba9188a0a5784917, type: 3}
+    - {fileID: 1056269890532808337, guid: e52a5f55d63c4b242956955d3ef2887f, type: 3}
+    - {fileID: 7382893636277148575, guid: 33a2525547a80064cace69b86401a15a, type: 3}
   - animalSprite:
     - {fileID: 21300000, guid: 50da98349a929614aaf9a8b47969abf2, type: 3}
     - {fileID: 21300000, guid: bf535a5c263de1d4190db2c43c4d0705, type: 3}
@@ -11832,7 +11664,14 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc43c7ccdc74c024f984157830ce5cf6, type: 3}
     - {fileID: 21300000, guid: 30684b265e89ba641a9b7b3b37172c45, type: 3}
     - {fileID: 21300000, guid: 4e87da1ece999884b99b8b2ccdb7332e, type: 3}
-    animalObject: []
+    animalObject:
+    - {fileID: 4724806298520279789, guid: d747ffbf9961dbf48b20faddfdd09e6a, type: 3}
+    - {fileID: 8590956481109847110, guid: 33a401762c6870046bc1c6d0d04968a0, type: 3}
+    - {fileID: 639054348494983324, guid: 42f1b33f35795d64493cba8e97a8321a, type: 3}
+    - {fileID: 2215787233564115979, guid: e919534a6913c0b4a8b2c28a887a64a5, type: 3}
+    - {fileID: 3489814606253922518, guid: 958a704222e37164998a1de679a5ec1a, type: 3}
+    - {fileID: 1959587542773124546, guid: fae5470ff68fa254d954c042bd1d45ea, type: 3}
+    - {fileID: 5402058674591347118, guid: 2f1ebad3fa3f9e64fab7962d49c05e33, type: 3}
   noneSprite: {fileID: 21300000, guid: 4c7a8c65cb4be754bbbcdb5964afc208, type: 3}
 --- !u!4 &2114537407
 Transform:
