@@ -124,4 +124,4 @@ MonoBehaviour:
   _meshRenderer: {fileID: 1169763103831028654}
   freezeMaterial: {fileID: 2100000, guid: b8e1a2fa19d7eb14694943b831f12dae, type: 2}
   health: 250
-  speed: 1
+  speed: 1.1

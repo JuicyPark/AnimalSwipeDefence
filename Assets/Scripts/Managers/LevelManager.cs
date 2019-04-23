@@ -10,6 +10,7 @@ namespace Manager
     {
         [SerializeField] Animator _cameraAnimator;
         [SerializeField] Animator _bottomPanelAnimator;
+        [SerializeField] Animator _gameoverPanelAnimator;
         [SerializeField] Image _lifeBar;
         public enum LevelState { Ready, Battle }
 
@@ -44,12 +45,26 @@ namespace Manager
             EventManager.Instance.onClearLevel += IncreaseWalk;
             EventManager.Instance.onClearLevel += OnReady;
             EventManager.Instance.onMissMonster += DecreaseLife;
+            EventManager.Instance.onMissMonster += LifeCheck;
+            EventManager.Instance.onMissBoss += Decrease10Life;
+            EventManager.Instance.onMissBoss += LifeCheck;
         }
 
-        public void DecreaseLife()
+        void DecreaseLife()
         {
             life--;
-            _lifeBar.fillAmount = (float)life/maxLife;
+            _lifeBar.fillAmount = (float)life / maxLife;
+        }
+
+        void Decrease10Life()
+        {
+            life -= 10;
+            _lifeBar.fillAmount = (float)life / maxLife;
+        }
+
+        void LifeCheck()
+        {
+            if (life <= 0) _gameoverPanelAnimator.SetTrigger("isGameOver");
         }
 
         void IncreaseLevel() => level++;
@@ -58,8 +73,8 @@ namespace Manager
         public void IncreaseWalk()
         {
             walk += rewardWalk;
-            if (walk > 20)
-                walk = 20;
+            if (walk > maxWalk)
+                walk = maxWalk;
         }
         public void DecreaseWalk() => walk -= priceWalk;
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9070849269103061744}
   m_Layer: 9
   m_Name: Enemy1_4
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,4 +124,4 @@ MonoBehaviour:
   _meshRenderer: {fileID: 1495671510664751493}
   freezeMaterial: {fileID: 2100000, guid: b8e1a2fa19d7eb14694943b831f12dae, type: 2}
   health: 250
-  speed: 1
+  speed: 0.8

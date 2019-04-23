@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Service;
+using UnityEngine.SceneManagement;
 
 namespace Manager
 {
@@ -39,6 +40,8 @@ namespace Manager
             EventManager.Instance.onClick += ReviseResourceUI;
         }
 
+        public void ExitScene() => SceneManager.LoadScene(0);
+        public void RetryScene() => SceneManager.LoadScene(1);
         void ReviseLevelUI() => levelText.text = "<color=black>Lv.</color> "+(LevelManager.Instance.level+1).ToString();
         void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString() + "<color=yellow>G</color>";
         void ReviseWalkUI() => suppliesText.text = LevelManager.Instance.walk.ToString() + "/" + LevelManager.Instance.maxWalk.ToString();

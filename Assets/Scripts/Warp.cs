@@ -20,7 +20,10 @@ namespace InGame
             }
             else
             {
-                EventManager.Instance.onMissMonsterInvoke();
+                if(collider.transform.tag == "Boss")
+                    EventManager.Instance.onMissBossInvoke();
+                else
+                    EventManager.Instance.onMissMonsterInvoke();
                 Destroy(collider.gameObject);
             }
         }
