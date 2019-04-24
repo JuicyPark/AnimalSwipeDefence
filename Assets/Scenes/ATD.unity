@@ -246,7 +246,7 @@ MonoBehaviour:
   _bottomPanelAnimator: {fileID: 1393912726}
   _gameoverPanelAnimator: {fileID: 1912585613}
   _lifeBar: {fileID: 1595180142}
-  level: 0
+  level: 9
   resource: 20
   priceAnimal: 5
   rewardResource: 15
@@ -1022,12 +1022,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 813029142}
-  - {fileID: 816686905}
-  - {fileID: 411548439}
-  - {fileID: 185285923}
 --- !u!1 &119131794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746927c7033b230418a2217b7808ca90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warpDelay: 1
   stages:
   - {fileID: 737806589}
   - {fileID: 255026857}
@@ -1152,6 +1147,37 @@ MonoBehaviour:
   - {fileID: 1532663078}
   - {fileID: 371990056}
   - {fileID: 967859687}
+  spawnPositionsA:
+  - {fileID: 816686905}
+  - {fileID: 632489891}
+  - {fileID: 1057866807}
+  - {fileID: 1661970041}
+  - {fileID: 1456104374}
+  - {fileID: 1448276236}
+  - {fileID: 1814444926}
+  - {fileID: 486659211}
+  - {fileID: 813029142}
+  - {fileID: 676197553}
+  - {fileID: 1575063552}
+  - {fileID: 434592947}
+  - {fileID: 2052906526}
+  - {fileID: 2053761178}
+  spawnPositionsB:
+  - {fileID: 1521290028}
+  - {fileID: 241607197}
+  - {fileID: 94493525}
+  - {fileID: 688655017}
+  - {fileID: 185285923}
+  - {fileID: 140883127}
+  - {fileID: 860732844}
+  - {fileID: 1788883999}
+  - {fileID: 946063909}
+  - {fileID: 1327949013}
+  - {fileID: 1296181422}
+  - {fileID: 1242716539}
+  - {fileID: 411548439}
+  - {fileID: 330081942}
+  warpIndex: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
   warps:
   - {fileID: 1145004534060787789}
   - {fileID: 1145004533817366282}
@@ -1342,12 +1368,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 850
   delayTime: 1
-  warpPosition:
-  - {fileID: 185285923}
-  - {fileID: 1057866807}
-  - {fileID: 434592947}
-  - {fileID: 486659211}
-  - {fileID: 2053761178}
 --- !u!4 &135861280
 Transform:
   m_ObjectHideFlags: 0
@@ -1784,12 +1804,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 688655017}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 140883127}
-  - {fileID: 241607197}
 --- !u!1 &205855593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,12 +1838,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 500
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 813029142}
-  - {fileID: 816686905}
-  - {fileID: 411548439}
-  - {fileID: 185285923}
 --- !u!4 &205855595
 Transform:
   m_ObjectHideFlags: 0
@@ -2066,7 +2074,8 @@ Transform:
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 7, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1145004533932308884}
   m_Father: {fileID: 140315958}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
@@ -2166,12 +2175,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 150
   delayTime: 1
-  warpPosition:
-  - {fileID: 2053761178}
-  - {fileID: 411548439}
-  - {fileID: 1456104374}
-  - {fileID: 94493525}
-  - {fileID: 1661970041}
 --- !u!1 &276567415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,12 +2737,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 688655017}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 140883127}
-  - {fileID: 241607197}
 --- !u!1 &373539193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,12 +2983,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 2053761178}
-  - {fileID: 411548439}
-  - {fileID: 1456104374}
-  - {fileID: 94493525}
-  - {fileID: 1661970041}
 --- !u!1 &383730814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,12 +3031,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 813029142}
-  - {fileID: 816686905}
-  - {fileID: 411548439}
-  - {fileID: 185285923}
 --- !u!1 &407028130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,12 +3178,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 185285923}
-  - {fileID: 1057866807}
-  - {fileID: 434592947}
-  - {fileID: 486659211}
-  - {fileID: 2053761178}
 --- !u!1 &411548438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,7 +3549,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 4, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1145004533817366282}
   m_Father: {fileID: 140315958}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
@@ -3828,12 +3808,6 @@ MonoBehaviour:
   enemyNumber: 1
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 2053761178}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 1661970041}
 --- !u!1 &471986207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,12 +3856,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1661970041}
-  - {fileID: 816686905}
-  - {fileID: 1456104374}
-  - {fileID: 860732844}
-  - {fileID: 1575063552}
 --- !u!1 &486659210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4001,12 +3969,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 700
   delayTime: 1
-  warpPosition:
-  - {fileID: 1661970041}
-  - {fileID: 816686905}
-  - {fileID: 1456104374}
-  - {fileID: 860732844}
-  - {fileID: 1575063552}
 --- !u!4 &497509154
 Transform:
   m_ObjectHideFlags: 0
@@ -4269,12 +4231,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 1000
   delayTime: 1
-  warpPosition:
-  - {fileID: 688655017}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 140883127}
-  - {fileID: 241607197}
 --- !u!4 &523017659
 Transform:
   m_ObjectHideFlags: 0
@@ -4516,12 +4472,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 400
   delayTime: 1
-  warpPosition:
-  - {fileID: 1296181422}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 1242716539}
-  - {fileID: 2052906526}
 --- !u!4 &588321057
 Transform:
   m_ObjectHideFlags: 0
@@ -5890,8 +5840,7 @@ Transform:
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 7, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1145004533817366282}
+  m_Children: []
   m_Father: {fileID: 140315958}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
@@ -6089,12 +6038,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 300
   delayTime: 1
-  warpPosition:
-  - {fileID: 1456104374}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 688655017}
-  - {fileID: 1327949013}
 --- !u!4 &700539525
 Transform:
   m_ObjectHideFlags: 0
@@ -6381,12 +6324,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 2053761178}
-  - {fileID: 411548439}
-  - {fileID: 1456104374}
-  - {fileID: 94493525}
-  - {fileID: 1661970041}
 --- !u!1 &737806587
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,12 +6372,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 90
   delayTime: 1
-  warpPosition:
-  - {fileID: 816686905}
-  - {fileID: 241607197}
-  - {fileID: 1057866807}
-  - {fileID: 688655017}
-  - {fileID: 1456104374}
 --- !u!1 &740576522
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,12 +6519,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 688655017}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 140883127}
-  - {fileID: 241607197}
 --- !u!1 &753703447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,12 +6679,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1296181422}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 1242716539}
-  - {fileID: 2052906526}
 --- !u!1 &791584153
 GameObject:
   m_ObjectHideFlags: 0
@@ -6999,8 +6918,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 1, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1145004534060787789}
+  m_Children: []
   m_Father: {fileID: 140315958}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
@@ -7291,12 +7209,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 816686905}
-  - {fileID: 241607197}
-  - {fileID: 1057866807}
-  - {fileID: 688655017}
-  - {fileID: 1456104374}
 --- !u!1 &838417652
 GameObject:
   m_ObjectHideFlags: 0
@@ -7785,7 +7697,8 @@ Transform:
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 7, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1145004534014770789}
   m_Father: {fileID: 140315958}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
@@ -8229,12 +8142,6 @@ MonoBehaviour:
   enemyNumber: 1
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 2053761178}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 1661970041}
 --- !u!1 &985304807
 GameObject:
   m_ObjectHideFlags: 0
@@ -8524,12 +8431,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1296181422}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 1242716539}
-  - {fileID: 2052906526}
 --- !u!1 &994501240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8657,7 +8558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1008282839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13540,7 +13441,8 @@ Transform:
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -1, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
-  m_Children: []
+  m_Children:
+  - {fileID: 1145004534366347279}
   m_Father: {fileID: 140315958}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
@@ -14266,12 +14168,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1456104374}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 688655017}
-  - {fileID: 1327949013}
 --- !u!1 &1121651788
 GameObject:
   m_ObjectHideFlags: 0
@@ -14320,12 +14216,6 @@ MonoBehaviour:
   enemyNumber: 1
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 2053761178}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 1661970041}
 --- !u!1 &1122098599
 GameObject:
   m_ObjectHideFlags: 0
@@ -14572,12 +14462,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1448276236}
-  - {fileID: 2052906526}
-  - {fileID: 688655017}
-  - {fileID: 946063909}
-  - {fileID: 1575063552}
 --- !u!1 &1148664569
 GameObject:
   m_ObjectHideFlags: 0
@@ -14626,12 +14510,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1448276236}
-  - {fileID: 2052906526}
-  - {fileID: 688655017}
-  - {fileID: 946063909}
-  - {fileID: 1575063552}
 --- !u!1 &1159276358
 GameObject:
   m_ObjectHideFlags: 0
@@ -15088,12 +14966,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 200
   delayTime: 1
-  warpPosition:
-  - {fileID: 1448276236}
-  - {fileID: 2052906526}
-  - {fileID: 688655017}
-  - {fileID: 946063909}
-  - {fileID: 1575063552}
 --- !u!4 &1230393674
 Transform:
   m_ObjectHideFlags: 0
@@ -15669,8 +15541,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 3, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
-  m_Children:
-  - {fileID: 1145004534366347279}
+  m_Children: []
   m_Father: {fileID: 140315958}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -16084,12 +15955,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1661970041}
-  - {fileID: 816686905}
-  - {fileID: 1456104374}
-  - {fileID: 860732844}
-  - {fileID: 1575063552}
 --- !u!1 &1327949012
 GameObject:
   m_ObjectHideFlags: 0
@@ -17728,12 +17593,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 185285923}
-  - {fileID: 1057866807}
-  - {fileID: 434592947}
-  - {fileID: 486659211}
-  - {fileID: 2053761178}
 --- !u!1 &1508868549
 GameObject:
   m_ObjectHideFlags: 0
@@ -17873,8 +17732,7 @@ Transform:
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1145004533932308884}
+  m_Children: []
   m_Father: {fileID: 140315958}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
@@ -17974,12 +17832,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 185285923}
-  - {fileID: 1057866807}
-  - {fileID: 434592947}
-  - {fileID: 486659211}
-  - {fileID: 2053761178}
 --- !u!1 &1542305455
 GameObject:
   m_ObjectHideFlags: 0
@@ -18430,12 +18282,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 816686905}
-  - {fileID: 241607197}
-  - {fileID: 1057866807}
-  - {fileID: 688655017}
-  - {fileID: 1456104374}
 --- !u!1 &1570772265
 GameObject:
   m_ObjectHideFlags: 0
@@ -23492,12 +23338,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1456104374}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 688655017}
-  - {fileID: 1327949013}
 --- !u!1 &1634706372
 GameObject:
   m_ObjectHideFlags: 0
@@ -23831,12 +23671,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 816686905}
-  - {fileID: 241607197}
-  - {fileID: 1057866807}
-  - {fileID: 688655017}
-  - {fileID: 1456104374}
 --- !u!1 &1675159785
 GameObject:
   m_ObjectHideFlags: 0
@@ -25017,12 +24851,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1456104374}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 688655017}
-  - {fileID: 1327949013}
 --- !u!1 &1769543647
 GameObject:
   m_ObjectHideFlags: 0
@@ -29924,12 +29752,6 @@ MonoBehaviour:
   enemyNumber: 1
   health: 2500
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 2053761178}
-  - {fileID: 1521290028}
-  - {fileID: 1788883999}
-  - {fileID: 1661970041}
 --- !u!4 &1805880596
 Transform:
   m_ObjectHideFlags: 0
@@ -30196,7 +30018,7 @@ Transform:
   m_LocalPosition: {x: -1, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children:
-  - {fileID: 1145004534014770789}
+  - {fileID: 1145004534060787789}
   m_Father: {fileID: 140315958}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
@@ -30766,12 +30588,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1814444926}
-  - {fileID: 813029142}
-  - {fileID: 816686905}
-  - {fileID: 411548439}
-  - {fileID: 185285923}
 --- !u!1 &1936414636
 GameObject:
   m_ObjectHideFlags: 0
@@ -31311,12 +31127,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1661970041}
-  - {fileID: 816686905}
-  - {fileID: 1456104374}
-  - {fileID: 860732844}
-  - {fileID: 1575063552}
 --- !u!1 &1996289719
 GameObject:
   m_ObjectHideFlags: 0
@@ -36972,12 +36782,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 2053761178}
-  - {fileID: 411548439}
-  - {fileID: 1456104374}
-  - {fileID: 94493525}
-  - {fileID: 1661970041}
 --- !u!1 &2122171090
 GameObject:
   m_ObjectHideFlags: 0
@@ -37026,12 +36830,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1296181422}
-  - {fileID: 1814444926}
-  - {fileID: 816686905}
-  - {fileID: 1242716539}
-  - {fileID: 2052906526}
 --- !u!1 &2134733768
 GameObject:
   m_ObjectHideFlags: 0
@@ -37159,12 +36957,6 @@ MonoBehaviour:
   enemyNumber: 20
   health: 20
   delayTime: 1
-  warpPosition:
-  - {fileID: 1448276236}
-  - {fileID: 2052906526}
-  - {fileID: 688655017}
-  - {fileID: 946063909}
-  - {fileID: 1575063552}
 --- !u!33 &664454367759455824
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -37385,7 +37177,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145004533817366281}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -37397,7 +37189,7 @@ Transform:
   - {fileID: 548562119}
   - {fileID: 1777725798}
   - {fileID: 1816465342}
-  m_Father: {fileID: 688655017}
+  m_Father: {fileID: 434592947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1145004533817366283
@@ -37455,7 +37247,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145004533932308887}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -37467,7 +37259,7 @@ Transform:
   - {fileID: 407028131}
   - {fileID: 661856205}
   - {fileID: 740576523}
-  m_Father: {fileID: 1521290028}
+  m_Father: {fileID: 241607197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1145004533932308885
@@ -37612,7 +37404,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145004534014770790}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -37625,7 +37417,7 @@ Transform:
   - {fileID: 1165212044}
   - {fileID: 2111264249}
   - {fileID: 1740066506}
-  m_Father: {fileID: 1814444926}
+  m_Father: {fileID: 860732844}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1145004534014770790
@@ -37722,7 +37514,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145004534060787790}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -37734,7 +37526,7 @@ Transform:
   - {fileID: 1570772266}
   - {fileID: 373539194}
   - {fileID: 1859490694}
-  m_Father: {fileID: 813029142}
+  m_Father: {fileID: 1814444926}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1145004534060787790
@@ -37870,7 +37662,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145004534366347276}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -37882,7 +37674,7 @@ Transform:
   - {fileID: 1092283078}
   - {fileID: 276567416}
   - {fileID: 1234741159}
-  m_Father: {fileID: 1296181422}
+  m_Father: {fileID: 1057866807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &1607698642277248597

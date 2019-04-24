@@ -9,11 +9,13 @@ namespace Manager
     public class StageManager : Singleton<StageManager>
     {
         int currentStage;
-
+        [SerializeField] float warpDelay = 1f;
         [SerializeField] Stage[] stages;
+        public Transform[] spawnPositionsA;
+        public Transform[] spawnPositionsB;
+        [SerializeField] int[] warpIndex;
 
         public Transform[] warps;
-
         void Start()
         {
             Initialize();
@@ -22,23 +24,55 @@ namespace Manager
         void Initialize()
         {
             SetWarpTrigger();
-            EventManager.Instance.onClearLevel += DisableWarps;
+            SetRandomPosition();
+            ReviseStage();
+            EventManager.Instance.onClearLevel += SetRandomPosition;
             EventManager.Instance.onClearLevel += SetWarpTrigger;
+            EventManager.Instance.onClearLevel += ReviseStage;
             EventManager.Instance.onStartLevel += StartStageTrigger;
         }
 
-        public void SetWarpTrigger()
+        void SetRandomPosition()
         {
-            currentStage = LevelManager.Instance.level;
-            stages[currentStage].SetWarp();
+            for (int i = 0; i < warps.Length; i++)
+            {
+                int randomIndex = Random.Range(i, warpIndex.Length);
+                int temp = warpIndex[randomIndex];
+                warpIndex[randomIndex] = warpIndex[i];
+                warpIndex[i] = temp;
+            }
+
+            for (int i = 0; i < warps.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    warps[i].SetParent(spawnPositionsA[warpIndex[i]]);
+                    warps[i].position = spawnPositionsA[warpIndex[i]].position;
+                    warps[i].localRotation = Quaternion.Euler(0, 0, 90f);
+                }
+                else
+                {
+                    warps[i].SetParent(spawnPositionsB[warpIndex[i]]);
+                    warps[i].position = spawnPositionsB[warpIndex[i]].position;
+                    warps[i].localRotation = Quaternion.Euler(0, 0, 90f);
+                }
+            }
         }
 
-        void DisableWarps()
+
+        void SetWarpTrigger() => StartCoroutine(CSetWarpTrigger());
+        void StartStageTrigger() => stages[currentStage].StartStage();
+        void ReviseStage()=> currentStage = LevelManager.Instance.level;
+
+        IEnumerator CSetWarpTrigger()
         {
             for (int i = 0; i < warps.Length; i++)
                 warps[i].gameObject.SetActive(false);
+            for (int i = 0; i < warps.Length; i++)
+            {
+                yield return new WaitForSeconds(warpDelay);
+                warps[i].gameObject.SetActive(true);
+            }
         }
-
-        void StartStageTrigger() => stages[currentStage].StartStage();
     }
 }
