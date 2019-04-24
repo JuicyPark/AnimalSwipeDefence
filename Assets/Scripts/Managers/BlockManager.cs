@@ -52,9 +52,21 @@ namespace Manager
                 endTouch = Input.GetTouch(0).position;
                 if (currentDirection.Equals(Direction.None))
                 {
-                    if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive) && LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
+                    if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive))
                     {
-                        LevelManager.Instance.DecreaseWalk();
+                        if (LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
+                        {
+                            LevelManager.Instance.DecreaseWalk();
+                            UIManager.Instance.AnimateWalkUI();
+                        }
+                        else if (LevelManager.Instance.resource >= LevelManager.Instance.priceWalk)
+                        {
+                            LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceWalk);
+                            UIManager.Instance.AnimateResourceUI();
+                        }
+                        else
+                            return;
+
                         dragDistance = endTouch.x - startTouch.x;
                         SetSelectBlocks(Direction.MoveToX);
                         currentDirection = Direction.MoveToX;
@@ -62,9 +74,21 @@ namespace Manager
                         ChangePositionX(dragDistance);
                         StartCoroutine(CMoveHorizontal(dragDistance));
                     }
-                    else if ((endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive) && LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
+                    else if ((endTouch.y - startTouch.y > touchSenstive || endTouch.y - startTouch.y < -touchSenstive))
                     {
-                        LevelManager.Instance.DecreaseWalk();
+                        if (LevelManager.Instance.walk >= LevelManager.Instance.priceWalk)
+                        {
+                            LevelManager.Instance.DecreaseWalk();
+                            UIManager.Instance.AnimateWalkUI();
+                        }
+                        else if (LevelManager.Instance.resource >= LevelManager.Instance.priceWalk)
+                        {
+                            LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceWalk);
+                            UIManager.Instance.AnimateResourceUI();
+                        }
+                        else
+                            return;
+
                         dragDistance = endTouch.y - startTouch.y;
                         SetSelectBlocks(Direction.MoveToY);
                         currentDirection = Direction.MoveToY;

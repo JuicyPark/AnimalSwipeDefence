@@ -253,10 +253,10 @@ MonoBehaviour:
   resource: 20
   priceAnimal: 3
   rewardResource: 10
-  walk: 10
+  walk: 3
   priceWalk: 1
-  rewardWalk: 20
-  maxWalk: 30
+  rewardWalk: 3
+  maxWalk: 5
   life: 30
   maxLife: 30
   currentState: 0
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   enemyObject: {fileID: 948481464217361257, guid: 7f5faf3b8481ae94f8c7dae296a77925,
     type: 3}
   enemyNumber: 20
-  health: 900
+  health: 850
   delayTime: 1
   warpPosition:
   - {fileID: 185285923}
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2200537622878581298, guid: 498a897663b9b7446991d80b82884a80,
     type: 3}
   enemyNumber: 20
-  health: 600
+  health: 500
   delayTime: 1
   warpPosition:
   - {fileID: 1814444926}
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelText: {fileID: 467514673}
   resourceText: {fileID: 2134733770}
-  suppliesText: {fileID: 1094714722}
+  walkText: {fileID: 1094714722}
   levelImage: {fileID: 800003146}
   enemySprites:
   - {fileID: 21300000, guid: 3d42e352addd06546a384dcb972957c9, type: 3}
@@ -1936,6 +1936,9 @@ MonoBehaviour:
   - {fileID: 1783873498}
   - {fileID: 2048305705}
   - {fileID: 1980817666}
+  _levelAnimator: {fileID: 800003148}
+  _resourceAnimator: {fileID: 579657110}
+  _walkAnimator: {fileID: 1634706376}
 --- !u!4 &211421270
 Transform:
   m_ObjectHideFlags: 0
@@ -3623,7 +3626,7 @@ MonoBehaviour:
   enemyObject: {fileID: 948481464217361257, guid: 7f5faf3b8481ae94f8c7dae296a77925,
     type: 3}
   enemyNumber: 20
-  health: 800
+  health: 700
   delayTime: 1
   warpPosition:
   - {fileID: 1661970041}
@@ -3924,6 +3927,7 @@ GameObject:
   - component: {fileID: 579657107}
   - component: {fileID: 579657109}
   - component: {fileID: 579657108}
+  - component: {fileID: 579657110}
   m_Layer: 5
   m_Name: Resource_Image
   m_TagString: Untagged
@@ -3947,9 +3951,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000005722, y: 100}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579657108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,6 +3991,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579657106}
   m_CullTransparentMesh: 0
+--- !u!95 &579657110
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579657106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dce48c5666a1b4d4cb7d2a03188e4935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &588321055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,7 +4042,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2200537622878581298, guid: 498a897663b9b7446991d80b82884a80,
     type: 3}
   enemyNumber: 20
-  health: 500
+  health: 400
   delayTime: 1
   warpPosition:
   - {fileID: 1296181422}
@@ -5400,7 +5423,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2200537622878581298, guid: 498a897663b9b7446991d80b82884a80,
     type: 3}
   enemyNumber: 20
-  health: 400
+  health: 300
   delayTime: 1
   warpPosition:
   - {fileID: 1456104374}
@@ -6103,6 +6126,7 @@ GameObject:
   - component: {fileID: 800003145}
   - component: {fileID: 800003147}
   - component: {fileID: 800003146}
+  - component: {fileID: 800003148}
   m_Layer: 5
   m_Name: Level_Image
   m_TagString: Untagged
@@ -6126,9 +6150,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 89.589966}
+  m_AnchoredPosition: {x: 0, y: 49.589966}
   m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.4999999, y: 0.50000006}
 --- !u!114 &800003146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,6 +6190,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800003144}
   m_CullTransparentMesh: 0
+--- !u!95 &800003148
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800003144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dce48c5666a1b4d4cb7d2a03188e4935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &813029141
 GameObject:
   m_ObjectHideFlags: 0
@@ -21234,6 +21277,7 @@ GameObject:
   - component: {fileID: 1634706373}
   - component: {fileID: 1634706375}
   - component: {fileID: 1634706374}
+  - component: {fileID: 1634706376}
   m_Layer: 5
   m_Name: Walk_Image
   m_TagString: Untagged
@@ -21257,9 +21301,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.4999999}
 --- !u!114 &1634706374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21297,6 +21341,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634706372}
   m_CullTransparentMesh: 0
+--- !u!95 &1634706376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634706372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dce48c5666a1b4d4cb7d2a03188e4935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1644577952
 GameObject:
   m_ObjectHideFlags: 0
@@ -27039,7 +27102,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1495671510667016005, guid: bbc3a60cdfa40da49b671ddf4e56bdb0,
     type: 3}
   enemyNumber: 1
-  health: 3500
+  health: 2500
   delayTime: 1
   warpPosition:
   - {fileID: 1814444926}
@@ -27382,7 +27445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1912585612
 RectTransform:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ namespace Manager
                 LevelManager.Instance.DecreaseResource(LevelManager.Instance.priceAnimal);
                 BlockManager.Instance.selectBlock.blockType = Block.Type.Player;
                 BlockManager.Instance.animalBlock.Add(BlockManager.Instance.selectBlock);
+                UIManager.Instance.AnimateResourceUI();
                 RandomAnimal();
             }
             EventManager.Instance.onClickInvoke();
@@ -50,7 +51,6 @@ namespace Manager
             targetBlock.blockType = Block.Type.None;
             targetBlock._spriteRenderer.sprite = AnimalInformation.Instance.noneSprite;
             BlockManager.Instance.animalBlock.Remove(targetBlock);
-            EventManager.Instance.onClickInvoke();
         }
     }
 }
