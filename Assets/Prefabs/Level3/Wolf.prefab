@@ -89,7 +89,7 @@ Animator:
   m_GameObject: {fileID: 5305319272822616896}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff7f0bac87b6134cacb2ed50c70e64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b8e0031fec04bb498587d32016cd1b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 5305319272823107426}
   - component: {fileID: 357688729931378406}
   - component: {fileID: 9036398605671418309}
+  - component: {fileID: 5959080812662264160}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -138,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 5305319272822616898}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.016, y: 0.016, z: 0.016}
   m_Children:
   - {fileID: 5305319272823107424}
   m_Father: {fileID: 0}
@@ -156,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 45
-  range: 2
+  damage: 40
+  range: 1
   _animator: {fileID: 1802924691694732524}
   attackAble: 0
   _enemyLayerMask:
@@ -178,3 +179,17 @@ MonoBehaviour:
   _animal: {fileID: 357688729931378406}
   isSlow: 0
   slowRate: 0
+--- !u!114 &5959080812662264160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305319272822616898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1802924691694732524}
+  type: 1

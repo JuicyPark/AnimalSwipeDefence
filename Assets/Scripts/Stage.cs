@@ -14,7 +14,7 @@ namespace InGame
         [Header("적 정보")]
         [SerializeField] GameObject enemyObject;
         [SerializeField] int enemyNumber;
-        [SerializeField] int health;
+        [SerializeField] float health;
         [Header("스폰 딜레이 시간")]
         [SerializeField] float delayTime;
         [Header("스테이지 워프 위치")]
@@ -49,6 +49,7 @@ namespace InGame
                 GameObject enemy = Instantiate(enemyObject, warpPosition[0].position, 
                     Quaternion.Euler(0, warpPosition[0].eulerAngles.y, 0));
                 enemy.transform.SetParent(transform);
+                enemy.GetComponent<Enemy>().maxHealth = health;
                 enemy.GetComponent<Enemy>().health = health;
             }
             isAllSpawn = true;

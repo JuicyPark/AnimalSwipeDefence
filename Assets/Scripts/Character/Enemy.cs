@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InGame
 {
@@ -11,8 +12,10 @@ namespace InGame
 
         [SerializeField] MeshRenderer _meshRenderer;
         [SerializeField] Material freezeMaterial;
+        [SerializeField] Image _healthBar;
 
-        public int health;
+        public float maxHealth;
+        public float health;
         public float speed;
 
         void FixedUpdate()
@@ -38,6 +41,7 @@ namespace InGame
 
         void HealthCheck()
         {
+            _healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
                 Destroy(gameObject);
         }

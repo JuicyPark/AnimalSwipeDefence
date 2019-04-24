@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5990972532493817817}
   - component: {fileID: 454256789089849822}
   - component: {fileID: 6020627107098928087}
+  - component: {fileID: 3510238919367301615}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5990972532493978617}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.012, y: 0.012, z: 0.012}
   m_Children:
   - {fileID: 5990972532493817819}
   m_Father: {fileID: 0}
@@ -67,6 +68,20 @@ MonoBehaviour:
   _animal: {fileID: 454256789089849822}
   isSlow: 0
   slowRate: 0
+--- !u!114 &3510238919367301615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5990972532493978617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3032581792172741650}
+  type: 0
 --- !u!1 &5990972532493978619
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 5990972532493978619}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff7f0bac87b6134cacb2ed50c70e64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: f88f3a952b12fa741ae239329166af9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

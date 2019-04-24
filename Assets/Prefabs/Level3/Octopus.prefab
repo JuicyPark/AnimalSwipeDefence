@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 2656669798187272959}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.016, y: 0.016, z: 0.016}
   m_Children:
   - {fileID: 2656669798186981085}
   - {fileID: 287402429927377718}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  range: 2
+  range: 1
   _animator: {fileID: 9027992641337838763}
   attackAble: 0
   _enemyLayerMask:
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animal: {fileID: 8168670274322269582}
   isSlow: 1
-  slowRate: 0.6
+  slowRate: 0.7
 --- !u!1001 &5393407083227911032
 PrefabInstance:
   m_ObjectHideFlags: 0

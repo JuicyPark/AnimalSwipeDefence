@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7890498191645737092}
   - component: {fileID: 3367983120106580230}
   - component: {fileID: 1804132128917826636}
+  - component: {fileID: 957082188036051177}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7890498191646235812}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.018, y: 0.018, z: 0.018}
   m_Children:
   - {fileID: 7890498191645737094}
   m_Father: {fileID: 0}
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 90
   range: 1
   _animator: {fileID: 1561147713776036601}
   attackAble: 0
@@ -67,6 +68,20 @@ MonoBehaviour:
   _animal: {fileID: 3367983120106580230}
   isSlow: 0
   slowRate: 0
+--- !u!114 &957082188036051177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890498191646235812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1561147713776036601}
+  type: 2
 --- !u!1 &7890498191646235814
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 7890498191646235814}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff7f0bac87b6134cacb2ed50c70e64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6e6137e5ac23b7043b35c5ef96132739, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -89,7 +89,7 @@ Animator:
   m_GameObject: {fileID: 2215787233564115977}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff7f0bac87b6134cacb2ed50c70e64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6e6137e5ac23b7043b35c5ef96132739, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2215787233563695147}
   - component: {fileID: 7121314785464965225}
   - component: {fileID: 4499558968794456440}
+  - component: {fileID: 4701655816524818218}
   m_Layer: 0
   m_Name: PolarBear
   m_TagString: Untagged
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 200
   range: 1
   _animator: {fileID: 2392800643845478621}
   attackAble: 0
@@ -178,3 +179,17 @@ MonoBehaviour:
   _animal: {fileID: 7121314785464965225}
   isSlow: 0
   slowRate: 0
+--- !u!114 &4701655816524818218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215787233564115979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 2392800643845478621}
+  type: 2

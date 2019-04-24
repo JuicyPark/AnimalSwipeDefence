@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 530194294053974556}
   - component: {fileID: 530194294053613114}
   - component: {fileID: 530194294053613115}
+  - component: {fileID: 3957494189460186352}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 530194294053613116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.014, y: 0.014, z: 0.014}
   m_Children:
   - {fileID: 530194294053974558}
   m_Father: {fileID: 0}
@@ -45,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
-  range: 2
+  damage: 16
+  range: 1
   _animator: {fileID: 530194294053613113}
   attackAble: 0
   _enemyLayerMask:
@@ -67,6 +68,20 @@ MonoBehaviour:
   _animal: {fileID: 530194294053613114}
   isSlow: 0
   slowRate: 0
+--- !u!114 &3957494189460186352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530194294053613116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 530194294053613113}
+  type: 1
 --- !u!1 &530194294053613118
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 530194294053613118}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff7f0bac87b6134cacb2ed50c70e64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b8e0031fec04bb498587d32016cd1b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
