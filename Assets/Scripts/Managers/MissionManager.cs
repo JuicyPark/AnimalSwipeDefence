@@ -12,7 +12,6 @@ namespace Manager
         [SerializeField] Animator missionAnimator;
         [SerializeField] Image missionIcon;
         [SerializeField] Text missionText;
-        [SerializeField] AudioSource _audioSource;
 
         public MissionTrigger[] mission;
 
@@ -38,7 +37,6 @@ namespace Manager
             missionIcon.sprite = sprite;
             this.missionText.text = missionText;
             missionAnimator.SetTrigger("IsOpen");
-            _audioSource.Play();
             LevelManager.Instance.resource += reward;
             EventManager.Instance.onMissionInvoke();
         }
