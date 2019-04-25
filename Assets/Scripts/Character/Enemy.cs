@@ -39,7 +39,7 @@ namespace InGame
                 StartCoroutine(CDecreaseSpeed(slowRate));
         }
 
-        void HealthCheck()
+        protected virtual void HealthCheck()
         {
             _healthBar.fillAmount = health / maxHealth;
             if (health <= 0)

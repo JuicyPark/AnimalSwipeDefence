@@ -193,6 +193,7 @@ MonoBehaviour:
   _animal: {fileID: 1651292406750967727}
   isSlow: 0
   slowRate: 0
+  _audioSource: {fileID: 0}
 --- !u!1001 &846382466737270036
 PrefabInstance:
   m_ObjectHideFlags: 0

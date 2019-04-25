@@ -87,6 +87,7 @@ namespace Manager
                 _bottomPanelAnimator.SetBool("isBattle", true);
                 BlockManager.Instance.AnimalSpawn();
                 EventManager.Instance.onStartLevelInvoke();
+                ClickManager.Instance.PlayClickSound();
             }
         }
 

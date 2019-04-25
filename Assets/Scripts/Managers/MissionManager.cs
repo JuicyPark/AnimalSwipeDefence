@@ -12,6 +12,7 @@ namespace Manager
         [SerializeField] Animator missionAnimator;
         [SerializeField] Image missionIcon;
         [SerializeField] Text missionText;
+        [SerializeField] AudioSource _audioSource;
 
         public MissionTrigger[] mission;
 
@@ -25,13 +26,19 @@ namespace Manager
             EventManager.Instance.onMissMonster += MissionCheck4;
             EventManager.Instance.onMissBoss += MissionCheck4;
             EventManager.Instance.onClick += MissionCheck5;
+            EventManager.Instance.onBossClear += MissionCheck6;
+            EventManager.Instance.onBossClear += MissionCheck7;
+            EventManager.Instance.onBossClear += MissionCheck8;
+            EventManager.Instance.onBossClear += FinalBossClear;
         }
+
         public void ClearMission(Sprite sprite, string missionText, int reward)
         {
             LevelManager.Instance.currentState = LevelManager.LevelState.Battle;
             missionIcon.sprite = sprite;
             this.missionText.text = missionText;
             missionAnimator.SetTrigger("IsOpen");
+            _audioSource.Play();
             LevelManager.Instance.resource += reward;
             EventManager.Instance.onMissionInvoke();
         }
@@ -69,7 +76,6 @@ namespace Manager
                 EventManager.Instance.onMove -= MissionCheck3;
             }
         }
-
         public void MissionCheck4()
         {
             if (LevelManager.Instance.life <= 5)
@@ -86,6 +92,41 @@ namespace Manager
                 mission[5].TriggerMission();
                 EventManager.Instance.onClick -= MissionCheck5;
             }
+        }
+        public void MissionCheck6()
+        {
+            if (LevelManager.Instance.level.Equals(9))
+            {
+                mission[6].TriggerMission();
+                EventManager.Instance.onBossClear -= MissionCheck6;
+            }
+        }
+        public void MissionCheck7()
+        {
+            if (LevelManager.Instance.level.Equals(19))
+            {
+                mission[7].TriggerMission();
+                EventManager.Instance.onBossClear -= MissionCheck7;
+            }
+        }
+        public void MissionCheck8()
+        {
+            if (LevelManager.Instance.level.Equals(29))
+            {
+                mission[8].TriggerMission();
+                EventManager.Instance.onBossClear -= MissionCheck8;
+            }
+        }
+        public void FinalBossClear()
+        {
+            if (LevelManager.Instance.level.Equals(39))
+            {
+                Debug.Log("클리어");
+            }
+        }
+        public void FinalBossFail()
+        {
+            Debug.Log("실패");
         }
     }
 }

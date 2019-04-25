@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 8689215}
   - component: {fileID: 8689219}
   - component: {fileID: 8689218}
+  - component: {fileID: 8689220}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -317,6 +318,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a21e6a62cd7b949845b7c4edac1b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 8689220}
+--- !u!82 &8689220
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689214}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d4f8015655cf1374c925db70337930a5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &14757592
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +1067,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3900
   delayTime: 1
 --- !u!1 &119131794
 GameObject:
@@ -1040,7 +1138,7 @@ Transform:
   - {fileID: 371990055}
   - {fileID: 967859686}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &119131796
 MonoBehaviour:
@@ -1314,7 +1412,7 @@ MonoBehaviour:
   enemyObject: {fileID: 948481464217361257, guid: 7f5faf3b8481ae94f8c7dae296a77925,
     type: 3}
   enemyNumber: 20
-  health: 850
+  health: 700
   delayTime: 1
 --- !u!4 &135861280
 Transform:
@@ -1386,7 +1484,7 @@ Transform:
   - {fileID: 411548439}
   - {fileID: 330081942}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &140883126
 GameObject:
@@ -1467,6 +1565,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &142560199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142560201}
+  - component: {fileID: 142560200}
+  m_Layer: 0
+  m_Name: Mission7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &142560200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142560199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6bbf4260bef29448cb4208e74ac266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 6252b0db2b5bb0047a04d5e9d79ede1e, type: 3}
+  missionText: "\uD669\uC57C\uC758 \uC8FC\uC778 \uCC98\uCE58 <color=\"yellow\">+10G</color>"
+  reward: 10
+--- !u!4 &142560201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142560199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036696550}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150078852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1894,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7983479410012565580, guid: 7db6707d4084e304a8b9cb0ff41f052c,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3000
   delayTime: 1
 --- !u!1 &202573345
 GameObject:
@@ -1940,7 +2084,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215113073
 GameObject:
@@ -2167,7 +2311,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 150
+  health: 140
   delayTime: 1
 --- !u!1 &276567415
 GameObject:
@@ -2854,7 +2998,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 4450
   delayTime: 1
 --- !u!1 &373539193
 GameObject:
@@ -3100,7 +3244,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3500
   delayTime: 1
 --- !u!1 &383730814
 GameObject:
@@ -3148,7 +3292,7 @@ MonoBehaviour:
   enemyObject: {fileID: 4841469795014790842, guid: 5433adaee1e587c458ecd8ac6f7911fd,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2550
   delayTime: 1
 --- !u!1 &407028130
 GameObject:
@@ -3295,7 +3439,7 @@ MonoBehaviour:
   enemyObject: {fileID: 202115762489969977, guid: c5aefcde9cd995d458d7854b259eda16,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1650
   delayTime: 1
 --- !u!1 &411548438
 GameObject:
@@ -3846,7 +3990,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3373420167933698606, guid: d7fffdf16d1a4224394172d3d38dd8f5,
     type: 3}
   enemyNumber: 1
-  health: 20
+  health: 11500
   delayTime: 1
 --- !u!1 &471986207
 GameObject:
@@ -3894,7 +4038,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 4150
   delayTime: 1
 --- !u!1 &486659210
 GameObject:
@@ -4007,7 +4151,7 @@ MonoBehaviour:
   enemyObject: {fileID: 948481464217361257, guid: 7f5faf3b8481ae94f8c7dae296a77925,
     type: 3}
   enemyNumber: 20
-  health: 700
+  health: 600
   delayTime: 1
 --- !u!4 &497509154
 Transform:
@@ -4235,7 +4379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &523017657
 GameObject:
@@ -4269,7 +4413,7 @@ MonoBehaviour:
   enemyObject: {fileID: 948481464217361257, guid: 7f5faf3b8481ae94f8c7dae296a77925,
     type: 3}
   enemyNumber: 20
-  health: 1000
+  health: 800
   delayTime: 1
 --- !u!4 &523017659
 Transform:
@@ -4604,7 +4748,7 @@ Transform:
   - {fileID: 2048305706}
   - {fileID: 1980817667}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609267164
 GameObject:
@@ -5343,7 +5487,7 @@ Transform:
   - {fileID: 499296062}
   - {fileID: 1411853938}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660837663
 GameObject:
@@ -6454,7 +6598,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1804938346232551725, guid: 8fc384a249bf9d54ba83999e52950e49,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2050
   delayTime: 1
 --- !u!1 &737806587
 GameObject:
@@ -6502,7 +6646,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 90
+  health: 80
   delayTime: 1
 --- !u!1 &740576522
 GameObject:
@@ -6649,7 +6793,7 @@ MonoBehaviour:
   enemyObject: {fileID: 202115762489969977, guid: c5aefcde9cd995d458d7854b259eda16,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1700
   delayTime: 1
 --- !u!1 &753703447
 GameObject:
@@ -6809,7 +6953,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3800
   delayTime: 1
 --- !u!1 &791584153
 GameObject:
@@ -7339,7 +7483,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3400
   delayTime: 1
 --- !u!1 &844674740
 GameObject:
@@ -7639,6 +7783,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &860335459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860335461}
+  - component: {fileID: 860335460}
+  m_Layer: 0
+  m_Name: Mission8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &860335460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860335459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6bbf4260bef29448cb4208e74ac266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 5ba78e5404ce0914789656f911c2a06c, type: 3}
+  missionText: "\uBC14\uB2E4\uC758 \uC8FC\uC778 \uCC98\uCE58 <color=\"yellow\">+15G</color>"
+  reward: 15
+--- !u!4 &860335461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860335459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036696550}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &860732843
 GameObject:
   m_ObjectHideFlags: 0
@@ -8273,7 +8463,7 @@ MonoBehaviour:
   enemyObject: {fileID: 6538282435275253127, guid: 6fdfb81106b80284c8c76c74a87fb515,
     type: 3}
   enemyNumber: 1
-  health: 20
+  health: 22000
   delayTime: 1
 --- !u!1 &985304807
 GameObject:
@@ -8562,7 +8752,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1169763103829028206, guid: 485bea57e76e7c948a50f7fdf3968723,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1400
   delayTime: 1
 --- !u!1 &994501240
 GameObject:
@@ -8740,7 +8930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021609898
 GameObject:
@@ -14250,7 +14440,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3700
   delayTime: 1
 --- !u!1 &1121651788
 GameObject:
@@ -14298,7 +14488,7 @@ MonoBehaviour:
   enemyObject: {fileID: 6251455962072421813, guid: 9713e8bbdd8349444a60a4c88b4ab758,
     type: 3}
   enemyNumber: 1
-  health: 20
+  health: 8000
   delayTime: 1
 --- !u!1 &1122098599
 GameObject:
@@ -14544,7 +14734,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1804938346232551725, guid: 8fc384a249bf9d54ba83999e52950e49,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2150
   delayTime: 1
 --- !u!1 &1148664569
 GameObject:
@@ -14592,7 +14782,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 3600
   delayTime: 1
 --- !u!1 &1159276358
 GameObject:
@@ -14836,7 +15026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1201047961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15045,7 +15235,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 200
+  health: 190
   delayTime: 1
 --- !u!4 &1230393674
 Transform:
@@ -15692,7 +15882,7 @@ RectTransform:
   - {fileID: 1912585612}
   - {fileID: 887680957}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15956,7 +16146,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7983479410012565580, guid: 7db6707d4084e304a8b9cb0ff41f052c,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2700
   delayTime: 1
 --- !u!1 &1327949012
 GameObject:
@@ -16037,6 +16227,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1333425255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333425257}
+  - component: {fileID: 1333425256}
+  m_Layer: 0
+  m_Name: Mission6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1333425256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333425255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6bbf4260bef29448cb4208e74ac266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: a952e271bface6f4b9eedad8100afef6, type: 3}
+  missionText: "\uBC00\uB9BC\uC758 \uC8FC\uC778 \uCC98\uCE58 <color=\"yellow\">+10G</color>"
+  reward: 10
+--- !u!4 &1333425257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333425255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036696550}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334151770
 GameObject:
   m_ObjectHideFlags: 0
@@ -17352,7 +17588,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7983479410012565580, guid: 7db6707d4084e304a8b9cb0ff41f052c,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2850
   delayTime: 1
 --- !u!1 &1508868549
 GameObject:
@@ -17591,7 +17827,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 4300
   delayTime: 1
 --- !u!1 &1542305455
 GameObject:
@@ -17942,7 +18178,7 @@ MonoBehaviour:
   enemyObject: {fileID: 187190050229547846, guid: 8eab98af654320748b7d6f1485110ce4,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1100
   delayTime: 1
 --- !u!1 &1570772265
 GameObject:
@@ -22998,7 +23234,7 @@ MonoBehaviour:
   enemyObject: {fileID: 4841469795014790842, guid: 5433adaee1e587c458ecd8ac6f7911fd,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2250
   delayTime: 1
 --- !u!1 &1624335066
 GameObject:
@@ -23045,6 +23281,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2036696550}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1624924799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624924801}
+  - component: {fileID: 1624924800}
+  m_Layer: 0
+  m_Name: BackGroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1624924800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624924799}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1106d35347ef7e84898ebfbf0f21142c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1624924801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624924799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634706372
 GameObject:
@@ -23377,7 +23740,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1804938346232551725, guid: 8fc384a249bf9d54ba83999e52950e49,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1950
   delayTime: 1
 --- !u!1 &1675159785
 GameObject:
@@ -24023,7 +24386,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1169763103829028206, guid: 485bea57e76e7c948a50f7fdf3968723,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1300
   delayTime: 1
 --- !u!1 &1769543647
 GameObject:
@@ -28998,7 +29361,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1495671510667016005, guid: bbc3a60cdfa40da49b671ddf4e56bdb0,
     type: 3}
   enemyNumber: 1
-  health: 2500
+  health: 4100
   delayTime: 1
 --- !u!4 &1805880596
 Transform:
@@ -29433,7 +29796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1828375341
 Transform:
   m_ObjectHideFlags: 0
@@ -29447,7 +29810,7 @@ Transform:
   m_Children:
   - {fileID: 7172048}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1828375342
 MonoBehaviour:
@@ -29579,7 +29942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1912585612
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29682,7 +30045,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1169763103829028206, guid: 485bea57e76e7c948a50f7fdf3968723,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1500
   delayTime: 1
 --- !u!1 &1936414636
 GameObject:
@@ -30221,7 +30584,7 @@ MonoBehaviour:
   enemyObject: {fileID: 202115762489969977, guid: c5aefcde9cd995d458d7854b259eda16,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1600
   delayTime: 1
 --- !u!1 &1996289719
 GameObject:
@@ -30345,6 +30708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2036696550}
   - component: {fileID: 2036696551}
+  - component: {fileID: 2036696552}
   m_Layer: 0
   m_Name: MissionManager
   m_TagString: Untagged
@@ -30360,7 +30724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036696549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7869091, y: 0.36717558, z: 4.7167625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 680392150}
@@ -30369,8 +30733,11 @@ Transform:
   - {fileID: 542661293}
   - {fileID: 2078085009}
   - {fileID: 307934471}
+  - {fileID: 1333425257}
+  - {fileID: 142560201}
+  - {fileID: 860335461}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2036696551
 MonoBehaviour:
@@ -30387,6 +30754,7 @@ MonoBehaviour:
   missionAnimator: {fileID: 887680958}
   missionIcon: {fileID: 1351586279}
   missionText: {fileID: 1544609565}
+  _audioSource: {fileID: 2036696552}
   mission:
   - {fileID: 680392149}
   - {fileID: 202573346}
@@ -30394,6 +30762,105 @@ MonoBehaviour:
   - {fileID: 542661292}
   - {fileID: 2078085008}
   - {fileID: 307934470}
+  - {fileID: 1333425256}
+  - {fileID: 142560200}
+  - {fileID: 860335460}
+--- !u!82 &2036696552
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036696549}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7c371c022dcec47d4acf568f7526aeac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2048305705
 GameObject:
   m_ObjectHideFlags: 0
@@ -35834,7 +36301,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116767798
 GameObject:
@@ -35882,7 +36349,7 @@ MonoBehaviour:
   enemyObject: {fileID: 187190050229547846, guid: 8eab98af654320748b7d6f1485110ce4,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1150
   delayTime: 1
 --- !u!1 &2122171090
 GameObject:
@@ -35930,7 +36397,7 @@ MonoBehaviour:
   enemyObject: {fileID: 4841469795014790842, guid: 5433adaee1e587c458ecd8ac6f7911fd,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 2400
   delayTime: 1
 --- !u!1 &2134733768
 GameObject:
@@ -36057,7 +36524,7 @@ MonoBehaviour:
   enemyObject: {fileID: 187190050229547846, guid: 8eab98af654320748b7d6f1485110ce4,
     type: 3}
   enemyNumber: 20
-  health: 20
+  health: 1200
   delayTime: 1
 --- !u!33 &664454367759455824
 MeshFilter:

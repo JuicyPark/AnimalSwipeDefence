@@ -8,6 +8,13 @@ namespace Manager
 {
     public class ClickManager : Singleton<ClickManager>
     {
+        [SerializeField] AudioSource _audioSource;
+        void Start()
+        {
+            EventManager.Instance.onClick += PlayClickSound;
+        }
+        public void PlayClickSound() => _audioSource.Play();
+
         public void ClickPlayerBlock(Collider[] hitColliders)
         {
             foreach (Collider hit in hitColliders)
@@ -33,6 +40,7 @@ namespace Manager
                 UIManager.Instance.AnimateResourceUI();
                 RandomAnimal();
             }
+            else return;
             EventManager.Instance.onClickInvoke();
         }
 

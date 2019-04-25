@@ -68,6 +68,7 @@ MonoBehaviour:
   _animal: {fileID: 3199323799195476992}
   isSlow: 1
   slowRate: 0.8
+  _audioSource: {fileID: 0}
 --- !u!1 &8606009164251584183
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,6 +68,7 @@ MonoBehaviour:
   _animal: {fileID: 5575062897479410114}
   isSlow: 0
   slowRate: 0
+  _audioSource: {fileID: 0}
 --- !u!114 &3297149452709537308
 MonoBehaviour:
   m_ObjectHideFlags: 0

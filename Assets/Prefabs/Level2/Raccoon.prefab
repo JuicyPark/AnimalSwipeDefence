@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 16
+  damage: 17
   range: 1
   _animator: {fileID: 530194294053613113}
   attackAble: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   _animal: {fileID: 530194294053613114}
   isSlow: 0
   slowRate: 0
+  _audioSource: {fileID: 0}
 --- !u!114 &3957494189460186352
 MonoBehaviour:
   m_ObjectHideFlags: 0

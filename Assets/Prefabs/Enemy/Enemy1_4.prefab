@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1495671510664751493}
   - component: {fileID: 8071968305347599230}
   - component: {fileID: 8165097913293158358}
-  - component: {fileID: 9070849269103061744}
+  - component: {fileID: 4298431519721884754}
   m_Layer: 9
   m_Name: Enemy1_4
   m_TagString: Boss
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9070849269103061744
+--- !u!114 &4298431519721884754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,14 +119,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495671510667016005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db77673fd870964d916f19ea938fe4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d5944505c4081149826974d272d2de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 1495671510664751493}
   freezeMaterial: {fileID: 2100000, guid: b8e1a2fa19d7eb14694943b831f12dae, type: 2}
   _healthBar: {fileID: 5337208433311675122}
   maxHealth: 0
-  health: 250
+  health: 0
   speed: 0.8
 --- !u!1 &1980365846421614794
 GameObject:

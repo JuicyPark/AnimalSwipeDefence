@@ -22,6 +22,8 @@ namespace InGame
             {
                 if(collider.transform.tag == "Boss")
                     EventManager.Instance.onMissBossInvoke();
+                else if(collider.transform.tag == "FinalBoss")
+                    MissionManager.Instance.FinalBossFail();
                 else
                     EventManager.Instance.onMissMonsterInvoke();
                 Destroy(collider.gameObject);
