@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animal: {fileID: 6283933180626053186}
   _animator: {fileID: 1876456669011770333}
   type: 2
 --- !u!1 &1056269890532808339

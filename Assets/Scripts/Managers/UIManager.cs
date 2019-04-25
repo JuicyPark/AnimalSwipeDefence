@@ -40,6 +40,7 @@ namespace Manager
             EventManager.Instance.onMove += ReviseResourceUI;
             EventManager.Instance.onMove += ReviseWalkUI;
             EventManager.Instance.onClick += ReviseResourceUI;
+            EventManager.Instance.onMission += ReviseResourceUI;
         }
 
         public void ExitScene() => SceneManager.LoadScene(0);

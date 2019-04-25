@@ -25,13 +25,13 @@ namespace InGame
 
         void Move() => transform.Translate(0, 0, speed * Time.deltaTime);
 
-        public void Damage(int damage)
+        public void Damage(float damage)
         {
             health -= damage;
             HealthCheck();
         }
 
-        public void Damage(int damage, bool isSlow, float slowRate)
+        public void Damage(float damage, bool isSlow, float slowRate)
         {
             health -= damage;
             HealthCheck();

@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 120
+  damage: 140
   range: 1
   _animator: {fileID: 4934658080621730663}
   attackAble: 0
@@ -191,5 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e3e90191c63ad4095e67a5599fdf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animal: {fileID: 2205590643633118895}
   _animator: {fileID: 4934658080621730663}
   type: 0

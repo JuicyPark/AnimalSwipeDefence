@@ -27,9 +27,9 @@ namespace Manager
         public LayerMask blockLayerMask = 1 << 8;
         public float touchSenstive;
         public float moveDelay = 0.001f;
-        public int catNumber = 0;
-        public int dogNumber = 0;
-        public int bearNumber = 0;
+        public int catNumber = -1;
+        public int dogNumber = -1;
+        public int bearNumber = -1;
 
         void Update()
         {

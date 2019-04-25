@@ -6,8 +6,8 @@ namespace InGame
 {
     public class Animal : MonoBehaviour
     {
-        public int damage;
-        public int range;
+        public float damage;
+        public float range;
         public Animator _animator;
         public bool attackAble;
         public LayerMask _enemyLayerMask = 1 << 9;

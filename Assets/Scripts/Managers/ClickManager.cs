@@ -65,6 +65,7 @@ namespace Manager
             targetBlock.blockType = Block.Type.None;
             targetBlock._spriteRenderer.sprite = AnimalInformation.Instance.noneSprite;
             BlockManager.Instance.animalBlock.Remove(targetBlock);
+            EventManager.Instance.onClickInvoke();
         }
 
         bool CatCheck()

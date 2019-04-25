@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb751f39c31e83640b5ade77de15ac31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 220
+  damage: 250
   range: 1
   _animator: {fileID: 2654778515377030373}
   attackAble: 0

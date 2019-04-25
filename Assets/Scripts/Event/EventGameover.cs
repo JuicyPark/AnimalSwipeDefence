@@ -7,9 +7,6 @@ namespace InGame
     public class EventGameover : MonoBehaviour
     {
         [SerializeField] GameObject _challengePanel;
-        public void SetChallengePanel()
-        {
-            _challengePanel.SetActive(true);
-        }
+        public void SetChallengePanel()=> _challengePanel.SetActive(true);
     }
 }
