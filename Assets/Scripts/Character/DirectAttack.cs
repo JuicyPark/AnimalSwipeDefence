@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager;
 
 namespace InGame
 {
@@ -54,6 +55,7 @@ namespace InGame
 
         void Attack(RaycastHit hit)
         {
+            SoundManager.Instance.AttackSoundPlay();
             _animal.attackAble = false;
             transform.LookAt(hit.collider.transform);
             _animal._animator.SetTrigger("isAttack");

@@ -10,7 +10,6 @@ namespace Manager
     {
         [SerializeField] Animator _cameraAnimator;
         [SerializeField] Animator _bottomPanelAnimator;
-        [SerializeField] Animator _gameoverPanelAnimator;
         [SerializeField] Image _lifeBar;
         public enum LevelState { Ready, Battle }
 
@@ -69,7 +68,11 @@ namespace Manager
 
         void LifeCheck()
         {
-            if (life <= 0) _gameoverPanelAnimator.SetTrigger("isGameOver");
+            if (life <= 0)
+            {
+                UIManager.Instance._gameoverPanelAnimator.SetTrigger("isClose");
+                EventManager.Instance.onLoseInvoke();
+            }
         }
         void IncreaseLevel() => level++;
         public void IncreaseResource() => resource += rewardResource;

@@ -20,7 +20,8 @@ namespace Manager
         [SerializeField] Animator _walkAnimator;
         [SerializeField] Animator _stageClearAnimator;
         [SerializeField] GameObject _reverseButton;
-
+        [SerializeField] GameObject _ExitPanel;
+        public Animator _gameoverPanelAnimator;
         void Start()
         {
             Initialize();
@@ -73,9 +74,25 @@ namespace Manager
             StageManager.Instance.SetRandomPosition();
             StageManager.Instance.SetWarpTrigger();
         }
+
+        public void OnGoToLobby() => _gameoverPanelAnimator.SetTrigger("Lobby");
+
+        public void OnExitButton()
+        {
+            if(!_ExitPanel.activeSelf)
+            {
+                _ExitPanel.SetActive(true);
+                BlockManager.Instance.clickAble = false;
+            }
+            else
+            {
+                _ExitPanel.SetActive(false);
+                BlockManager.Instance.clickAble = true;
+            }
+        }
         void ReviseGround()
         {
-            if(LevelManager.Instance.level>=30)
+            if (LevelManager.Instance.level >= 30)
             {
                 grounds[0].SetActive(false);
                 grounds[1].SetActive(false);

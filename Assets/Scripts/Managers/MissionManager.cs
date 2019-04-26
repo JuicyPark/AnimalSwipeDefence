@@ -33,7 +33,7 @@ namespace Manager
 
         public void ClearMission(Sprite sprite, string missionText, int reward)
         {
-            LevelManager.Instance.currentState = LevelManager.LevelState.Battle;
+            BlockManager.Instance.clickAble = false;
             missionIcon.sprite = sprite;
             this.missionText.text = missionText;
             missionAnimator.SetTrigger("IsOpen");

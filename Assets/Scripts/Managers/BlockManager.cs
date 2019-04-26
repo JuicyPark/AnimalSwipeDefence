@@ -30,10 +30,11 @@ namespace Manager
         public int catNumber = -1;
         public int dogNumber = -1;
         public int bearNumber = -1;
+        public bool clickAble = true;
 
         void Update()
         {
-            if(LevelManager.Instance.currentState.Equals(LevelManager.LevelState.Ready))
+            if(LevelManager.Instance.currentState.Equals(LevelManager.LevelState.Ready)&& clickAble)
                 DragBlock();
         }
         void DragBlock()

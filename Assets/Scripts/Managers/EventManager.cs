@@ -18,6 +18,8 @@ namespace Manager
         public event Action onMission;
         public event Action onBossClear;
         public event Action onWarpSetting;
+        public event Action onLose;
+
 
         public void onMoveInvoke() => onMove?.Invoke();
         public void onClickInvoke() => onClick?.Invoke();
@@ -28,5 +30,6 @@ namespace Manager
         public void onMissionInvoke() => onMission?.Invoke();
         public void onBossClearInvoke() => onBossClear?.Invoke();
         public void onWarpSettingInvoke() => onWarpSetting?.Invoke();
+        public void onLoseInvoke() => onLose?.Invoke();
     }
 }

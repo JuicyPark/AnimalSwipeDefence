@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager;
 
 namespace InGame
 {
@@ -31,6 +32,7 @@ namespace InGame
         }
         void Attack(Collider[] colliders)
         {
+            SoundManager.Instance.AttackSoundPlay();
             _animal.attackAble = false;
             transform.LookAt(colliders[0].transform);
             _animal._animator.SetTrigger("isAttack");
