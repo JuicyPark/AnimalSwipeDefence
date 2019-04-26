@@ -23,8 +23,8 @@ namespace Manager
 
         void Initialize()
         {
-            SetWarpTrigger();
             SetRandomPosition();
+            SetWarpTrigger();
             ReviseStage();
             EventManager.Instance.onClearLevel += SetRandomPosition;
             EventManager.Instance.onClearLevel += SetWarpTrigger;
@@ -32,7 +32,7 @@ namespace Manager
             EventManager.Instance.onStartLevel += StartStageTrigger;
         }
 
-        void SetRandomPosition()
+        public void SetRandomPosition()
         {
             for (int i = 0; i < warps.Length; i++)
             {
@@ -60,7 +60,11 @@ namespace Manager
         }
 
 
-        void SetWarpTrigger() => StartCoroutine(CSetWarpTrigger());
+        public void SetWarpTrigger()
+        {
+            StopAllCoroutines();
+            StartCoroutine(CSetWarpTrigger());
+        }
         void StartStageTrigger() => stages[currentStage].StartStage();
         void ReviseStage()=> currentStage = LevelManager.Instance.level;
 
@@ -68,11 +72,14 @@ namespace Manager
         {
             for (int i = 0; i < warps.Length; i++)
                 warps[i].gameObject.SetActive(false);
+            yield return new WaitForSeconds(warpDelay*2);
             for (int i = 0; i < warps.Length; i++)
             {
                 yield return new WaitForSeconds(warpDelay);
                 warps[i].gameObject.SetActive(true);
             }
+            EventManager.Instance.onWarpSettingInvoke();
+            LevelManager.Instance.currentState = LevelManager.LevelState.Ready;
         }
     }
 }

@@ -28,6 +28,10 @@ namespace Manager
         public int rewardWalk = 10;
         public int maxWalk = 20;
 
+        [Header("재배치")]
+        public int reverse = 5;
+        public int maxReverse = 5;
+
         [Header("상태")]
         public int life = 30;
         public int maxLife = 30;
@@ -43,6 +47,7 @@ namespace Manager
             EventManager.Instance.onClearLevel += IncreaseLevel;
             EventManager.Instance.onClearLevel += IncreaseResource;
             EventManager.Instance.onClearLevel += IncreaseWalk;
+            EventManager.Instance.onClearLevel += IncreaseReverse;
             EventManager.Instance.onClearLevel += OnReady;
             EventManager.Instance.onMissMonster += DecreaseLife;
             EventManager.Instance.onMissMonster += LifeCheck;
@@ -66,7 +71,6 @@ namespace Manager
         {
             if (life <= 0) _gameoverPanelAnimator.SetTrigger("isGameOver");
         }
-
         void IncreaseLevel() => level++;
         public void IncreaseResource() => resource += rewardResource;
         public void DecreaseResource(int value) => resource -= value;
@@ -77,17 +81,23 @@ namespace Manager
                 walk = maxWalk;
         }
         public void DecreaseWalk() => walk -= priceWalk;
+        void IncreaseReverse()
+        {
+            reverse ++;
+            if (reverse > maxReverse)
+                reverse = maxReverse;
+        }
 
         public void OnBattle()
         {
             if (currentState.Equals(LevelState.Ready))
             {
+                SoundManager.Instance.SelectSoundPlay();
                 currentState = LevelState.Battle;
                 _cameraAnimator.SetBool("isBattle", true);
                 _bottomPanelAnimator.SetBool("isBattle", true);
                 BlockManager.Instance.AnimalSpawn();
                 EventManager.Instance.onStartLevelInvoke();
-                SoundManager.Instance.SelectSoundPlay();
             }
         }
 
@@ -95,7 +105,6 @@ namespace Manager
         {
             if (currentState.Equals(LevelState.Battle))
             {
-                currentState = LevelState.Ready;
                 _cameraAnimator.SetBool("isBattle", false);
                 _bottomPanelAnimator.SetBool("isBattle", false);
                 while (BlockManager.Instance.animalObject.Count > 0)

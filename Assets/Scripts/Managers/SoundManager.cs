@@ -14,11 +14,12 @@ namespace Manager
         {
             EventManager.Instance.onClick += SelectSoundPlay;
             EventManager.Instance.onMission += MissionClearSoundPlay;
+            EventManager.Instance.onClearLevel += StageClearSoundPlay;
         }
 
         public void SelectSoundPlay() => selectSound.Play();
-        void StageClearSoundPlay() => stageClearSound.Play();
         void MissionClearSoundPlay() => missionClearSound.Play();
+        void StageClearSoundPlay() => stageClearSound.Play();
 
     }
 }

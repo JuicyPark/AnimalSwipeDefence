@@ -18,6 +18,8 @@ namespace Manager
         [SerializeField] Animator _levelAnimator;
         [SerializeField] Animator _resourceAnimator;
         [SerializeField] Animator _walkAnimator;
+        [SerializeField] Animator _stageClearAnimator;
+        [SerializeField] GameObject _reverseButton;
 
         void Start()
         {
@@ -37,10 +39,13 @@ namespace Manager
             EventManager.Instance.onClearLevel += ReviseWalkUI;
             EventManager.Instance.onClearLevel += ReviseGround;
             EventManager.Instance.onClearLevel += AnimateLevelUI;
+            EventManager.Instance.onClearLevel += AnimateStageClear;
             EventManager.Instance.onMove += ReviseResourceUI;
             EventManager.Instance.onMove += ReviseWalkUI;
             EventManager.Instance.onClick += ReviseResourceUI;
             EventManager.Instance.onMission += ReviseResourceUI;
+            EventManager.Instance.onStartLevel += DisableReverseButton;
+            EventManager.Instance.onWarpSetting += ReviseReverse;
         }
 
         public void ExitScene() => SceneManager.LoadScene(0);
@@ -52,11 +57,22 @@ namespace Manager
         }
         void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString() + "<color=yellow>G</color>";
         void ReviseWalkUI() => walkText.text = LevelManager.Instance.walk.ToString() + "/" + LevelManager.Instance.maxWalk.ToString();
-
+        void ReviseReverse()
+        {
+            if (LevelManager.Instance.reverse == 5) _reverseButton.SetActive(true);
+        }
         void AnimateLevelUI() => _levelAnimator.SetTrigger("isRevise");
         public void AnimateResourceUI() => _resourceAnimator.SetTrigger("isRevise");
         public void AnimateWalkUI() => _walkAnimator.SetTrigger("isRevise");
-
+        public void AnimateStageClear() => _stageClearAnimator.SetTrigger("isOpen");
+        public void DisableReverseButton() => _reverseButton.SetActive(false);
+        public void OnReverseButton()
+        {
+            DisableReverseButton();
+            LevelManager.Instance.reverse = 0;
+            StageManager.Instance.SetRandomPosition();
+            StageManager.Instance.SetWarpTrigger();
+        }
         void ReviseGround()
         {
             if(LevelManager.Instance.level>=30)

@@ -17,6 +17,8 @@ namespace Manager
         public event Action onMissBoss;
         public event Action onMission;
         public event Action onBossClear;
+        public event Action onWarpSetting;
+
         public void onMoveInvoke() => onMove?.Invoke();
         public void onClickInvoke() => onClick?.Invoke();
         public void onClearLevelInvoke() => onClearLevel?.Invoke();
@@ -25,5 +27,6 @@ namespace Manager
         public void onMissBossInvoke() => onMissBoss?.Invoke();
         public void onMissionInvoke() => onMission?.Invoke();
         public void onBossClearInvoke() => onBossClear?.Invoke();
+        public void onWarpSettingInvoke() => onWarpSetting?.Invoke();
     }
 }
