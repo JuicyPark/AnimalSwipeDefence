@@ -10,7 +10,7 @@ namespace InGame
         public void OnStartButton() => _transition.SetTrigger("isClose");
 
 
-        public void OnOptionButton()
+        public void OnMissionButton()
         {
 
         }

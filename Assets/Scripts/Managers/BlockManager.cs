@@ -43,7 +43,6 @@ namespace Manager
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 startTouch = Input.GetTouch(0).position;
-
                 SelectBlock();
             }
 

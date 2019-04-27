@@ -25,7 +25,6 @@ namespace Manager
 
         void Initialize()
         {
-            SetRandomPosition();
             SetWarpTrigger();
             ReviseStage();
             EventManager.Instance.onClearLevel += SetRandomPosition;

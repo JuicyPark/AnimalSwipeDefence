@@ -532,7 +532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option
+  m_Text: Mission
 --- !u!222 &598400725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 1429794235}
   - component: {fileID: 1429794234}
   m_Layer: 5
-  m_Name: Option
+  m_Name: Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,7 +1046,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 424137100}
-        m_MethodName: OnOptionButton
+        m_MethodName: OnMissionButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
