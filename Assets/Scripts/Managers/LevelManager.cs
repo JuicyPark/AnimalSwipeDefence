@@ -69,11 +69,9 @@ namespace Manager
         void LifeCheck()
         {
             if (life <= 0)
-            {
-                UIManager.Instance._gameoverPanelAnimator.SetTrigger("isClose");
                 EventManager.Instance.onLoseInvoke();
-            }
         }
+
         void IncreaseLevel() => level++;
         public void IncreaseResource() => resource += rewardResource;
         public void DecreaseResource(int value) => resource -= value;

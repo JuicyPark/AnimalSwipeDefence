@@ -21,7 +21,7 @@ namespace Manager
         [SerializeField] Animator _stageClearAnimator;
         [SerializeField] GameObject _reverseButton;
         [SerializeField] GameObject _ExitPanel;
-        public Animator _gameoverPanelAnimator;
+        public Animator _transitionPanelAnimator;
         void Start()
         {
             Initialize();
@@ -47,6 +47,7 @@ namespace Manager
             EventManager.Instance.onMission += ReviseResourceUI;
             EventManager.Instance.onStartLevel += DisableReverseButton;
             EventManager.Instance.onWarpSetting += ReviseReverse;
+            EventManager.Instance.onLose += AnimateStageLose;
         }
 
         public void ExitScene() => SceneManager.LoadScene(0);
@@ -66,6 +67,7 @@ namespace Manager
         public void AnimateResourceUI() => _resourceAnimator.SetTrigger("isRevise");
         public void AnimateWalkUI() => _walkAnimator.SetTrigger("isRevise");
         public void AnimateStageClear() => _stageClearAnimator.SetTrigger("isOpen");
+        public void AnimateStageLose() => _transitionPanelAnimator.SetTrigger("isClose");
         public void DisableReverseButton() => _reverseButton.SetActive(false);
         public void OnReverseButton()
         {
@@ -75,7 +77,7 @@ namespace Manager
             StageManager.Instance.SetWarpTrigger();
         }
 
-        public void OnGoToLobby() => _gameoverPanelAnimator.SetTrigger("Lobby");
+        public void OnGoToLobby() => _transitionPanelAnimator.SetTrigger("Lobby");
 
         public void OnExitButton()
         {

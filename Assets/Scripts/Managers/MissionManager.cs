@@ -117,14 +117,9 @@ namespace Manager
         }
         public void FinalBossClear()
         {
-            if (LevelManager.Instance.level.Equals(39))
-            {
-                Debug.Log("클리어");
-            }
+            if (LevelManager.Instance.level.Equals(StageManager.Instance.stages.Length-1))
+                UIManager.Instance._transitionPanelAnimator.SetTrigger("Ending");
         }
-        public void FinalBossFail()
-        {
-            Debug.Log("실패");
-        }
+        public void FinalBossFail() => EventManager.Instance.onLoseInvoke();
     }
 }

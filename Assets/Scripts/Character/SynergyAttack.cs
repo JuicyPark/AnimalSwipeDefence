@@ -24,7 +24,6 @@ namespace InGame
             if (synergy > 2f) synergy = 2f;
             else if (synergy < 0.5f) synergy = 0.5f;
             _animal.damage *= synergy;
-            //_animator.SetFloat("AttackSpeed", synergy);
         }
     }
 }

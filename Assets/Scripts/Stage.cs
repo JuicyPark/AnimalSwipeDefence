@@ -20,7 +20,7 @@ namespace InGame
 
         void OnTransformChildrenChanged()
         {
-            if (isAllSpawn && transform.childCount == 0)
+            if (isAllSpawn && transform.childCount == 0 && LevelManager.Instance.level<StageManager.Instance.stages.Length-1)
                 EventManager.Instance.onClearLevelInvoke();
         }
 

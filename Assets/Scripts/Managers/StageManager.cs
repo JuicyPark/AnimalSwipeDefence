@@ -9,12 +9,14 @@ namespace Manager
     public class StageManager : Singleton<StageManager>
     {
         int currentStage;
+
         [SerializeField] float warpDelay = 1f;
-        [SerializeField] Stage[] stages;
-        public Transform[] spawnPositionsA;
-        public Transform[] spawnPositionsB;
         [SerializeField] int[] warpIndex;
 
+        public Stage[] stages;
+        public Transform[] spawnPositionsA;
+        public Transform[] spawnPositionsB;
+        
         public Transform[] warps;
         void Start()
         {
@@ -65,7 +67,10 @@ namespace Manager
             StopAllCoroutines();
             StartCoroutine(CSetWarpTrigger());
         }
-        void StartStageTrigger() => stages[currentStage].StartStage();
+        void StartStageTrigger()
+        {
+               stages[currentStage].StartStage();
+        }
         void ReviseStage()=> currentStage = LevelManager.Instance.level;
 
         IEnumerator CSetWarpTrigger()

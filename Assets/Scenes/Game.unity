@@ -971,7 +971,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 3900
+  health: 4000
   delayTime: 1
 --- !u!1 &119131794
 GameObject:
@@ -1057,6 +1057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warpDelay: 0.5
+  warpIndex: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
   stages:
   - {fileID: 737806589}
   - {fileID: 255026857}
@@ -1128,7 +1129,6 @@ MonoBehaviour:
   - {fileID: 1242716539}
   - {fileID: 411548439}
   - {fileID: 330081942}
-  warpIndex: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
   warps:
   - {fileID: 1145004534060787789}
   - {fileID: 1145004533817366282}
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   _stageClearAnimator: {fileID: 333701967}
   _reverseButton: {fileID: 133238642}
   _ExitPanel: {fileID: 1702657491}
-  _gameoverPanelAnimator: {fileID: 1912585613}
+  _transitionPanelAnimator: {fileID: 1912585613}
 --- !u!4 &211421270
 Transform:
   m_ObjectHideFlags: 0
@@ -3151,7 +3151,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 4450
+  health: 4500
   delayTime: 1
 --- !u!1 &373539193
 GameObject:
@@ -3397,7 +3397,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 3500
+  health: 3600
   delayTime: 1
 --- !u!1 &383730814
 GameObject:
@@ -4191,7 +4191,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 4150
+  health: 4200
   delayTime: 1
 --- !u!1 &486659210
 GameObject:
@@ -7187,7 +7187,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 3800
+  health: 3900
   delayTime: 1
 --- !u!1 &791584153
 GameObject:
@@ -7728,7 +7728,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 3400
+  health: 3500
   delayTime: 1
 --- !u!1 &844674740
 GameObject:
@@ -14685,7 +14685,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3377738806497289139, guid: 278199d49a096b84c89b364ea1904921,
     type: 3}
   enemyNumber: 20
-  health: 3700
+  health: 3800
   delayTime: 1
 --- !u!1 &1121651788
 GameObject:
@@ -15027,7 +15027,7 @@ MonoBehaviour:
   enemyObject: {fileID: 7810340165891465358, guid: 0b79b6757af957740b4be80614bffc1e,
     type: 3}
   enemyNumber: 20
-  health: 3600
+  health: 3700
   delayTime: 1
 --- !u!1 &1159276358
 GameObject:
@@ -18784,7 +18784,7 @@ MonoBehaviour:
   enemyObject: {fileID: 2170860034439228203, guid: e760dbee28b8bc44781d3a5d5537f788,
     type: 3}
   enemyNumber: 20
-  health: 4300
+  health: 4350
   delayTime: 1
 --- !u!1 &1542305455
 GameObject:
@@ -30748,7 +30748,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1495671510667016005, guid: bbc3a60cdfa40da49b671ddf4e56bdb0,
     type: 3}
   enemyNumber: 1
-  health: 4100
+  health: 4000
   delayTime: 1
 --- !u!4 &1805880596
 Transform:
@@ -31325,7 +31325,7 @@ GameObject:
   - component: {fileID: 1912585614}
   - component: {fileID: 1912585615}
   m_Layer: 5
-  m_Name: Gameover_Panel
+  m_Name: Transition_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
