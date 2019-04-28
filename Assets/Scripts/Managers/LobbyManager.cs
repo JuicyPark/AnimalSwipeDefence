@@ -9,12 +9,20 @@ namespace Manager
     {
         [SerializeField] Animator _transition;
         [SerializeField] GameObject _modeSelectPanel;
-        public void OnStartButton() => _modeSelectPanel.SetActive(true);
+        [SerializeField] Animator[] animalAnimators;
+        [SerializeField] GameObject descriptionPanel;
+        [SerializeField] float delay = 5f;
+        public void OnStartButton()
+        {
+            _modeSelectPanel.SetActive(true);
+            descriptionPanel.SetActive(false);
+        }
         public void OnXButton() =>_modeSelectPanel.SetActive(false);
 
         void Start()
         {
-            Time.timeScale = 1;
+            Time.timeScale = 1.2f;
+            StartCoroutine(CRandomJump());
         }
 
         public void OnEasyButton()
@@ -27,12 +35,16 @@ namespace Manager
             ModeManager.Instance.isEasyMode = false;
             LoadToGameScene();
         }
-
-        public void OnMissionButton()
-        {
-
-        }
         public void OnExitButton() => Application.Quit();
         void LoadToGameScene() => _transition.SetTrigger("isClose");
+
+        IEnumerator CRandomJump()
+        {
+            while(true)
+            {
+                yield return new WaitForSeconds(delay);
+                animalAnimators[Random.Range(0, animalAnimators.Length)].SetTrigger("Jump");
+            }
+        }
     }
 }

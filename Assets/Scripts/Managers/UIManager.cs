@@ -92,7 +92,7 @@ namespace Manager
 
         public void OnGoToLobby()
         {
-            Time.timeScale = 1;
+            Time.timeScale = 1.2f;
             _transitionPanelAnimator.SetTrigger("Lobby");
         }
         public void OnExitButton()
@@ -118,7 +118,7 @@ namespace Manager
             }
             else
             {
-                Time.timeScale = 1f;
+                Time.timeScale = 1.2f;
                 _accelerationText.text = ">>";
             }
         }
