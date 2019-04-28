@@ -12,15 +12,23 @@ namespace Manager
         [SerializeField] Text levelText;
         [SerializeField] Text resourceText;
         [SerializeField] Text walkText;
+        [SerializeField] Text _accelerationText;
+
         [SerializeField] Image levelImage;
         [SerializeField] Sprite[] enemySprites;
-        [SerializeField] GameObject[] grounds;
+
         [SerializeField] Animator _levelAnimator;
         [SerializeField] Animator _resourceAnimator;
         [SerializeField] Animator _walkAnimator;
         [SerializeField] Animator _stageClearAnimator;
+
+        [SerializeField] GameObject[] grounds;
         [SerializeField] GameObject _reverseButton;
-        [SerializeField] GameObject _ExitPanel;
+        [SerializeField] GameObject _exitPanel;
+        [SerializeField] GameObject _easymodePanel;
+
+        [SerializeField] GameObject _accelerationPanel;
+        [SerializeField] float acceleration = 2f;
         public Animator _transitionPanelAnimator;
         void Start()
         {
@@ -30,6 +38,11 @@ namespace Manager
         void Initialize()
         {
             Screen.SetResolution(720, 1280, true);
+            if (ModeManager.Instance.isEasyMode)
+                _easymodePanel.SetActive(true);
+            if (PlayerPrefs.GetInt("Clear").Equals(1))
+                _accelerationPanel.SetActive(true);
+
             ReviseLevelUI();
             ReviseResourceUI();
             ReviseWalkUI();
@@ -77,19 +90,36 @@ namespace Manager
             StageManager.Instance.SetWarpTrigger();
         }
 
-        public void OnGoToLobby() => _transitionPanelAnimator.SetTrigger("Lobby");
-
+        public void OnGoToLobby()
+        {
+            Time.timeScale = 1;
+            _transitionPanelAnimator.SetTrigger("Lobby");
+        }
         public void OnExitButton()
         {
-            if(!_ExitPanel.activeSelf)
+            if(!_exitPanel.activeSelf)
             {
-                _ExitPanel.SetActive(true);
+                _exitPanel.SetActive(true);
                 BlockManager.Instance.clickAble = false;
             }
             else
             {
-                _ExitPanel.SetActive(false);
+                _exitPanel.SetActive(false);
                 BlockManager.Instance.clickAble = true;
+            }
+        }
+
+        public void OnAccelationButton()
+        {
+            if (Time.timeScale.Equals(1f))
+            {
+                Time.timeScale = acceleration;
+                _accelerationText.text = "-";
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                _accelerationText.text = ">>";
             }
         }
         void ReviseGround()

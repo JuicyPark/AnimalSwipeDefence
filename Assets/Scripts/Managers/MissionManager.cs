@@ -118,7 +118,10 @@ namespace Manager
         public void FinalBossClear()
         {
             if (LevelManager.Instance.level.Equals(StageManager.Instance.stages.Length-1))
+            {
+                PlayerPrefs.SetInt("Clear", 1);
                 UIManager.Instance._transitionPanelAnimator.SetTrigger("Ending");
+            }
         }
         public void FinalBossFail() => EventManager.Instance.onLoseInvoke();
     }

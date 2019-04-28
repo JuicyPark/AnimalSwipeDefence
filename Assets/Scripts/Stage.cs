@@ -32,8 +32,8 @@ namespace InGame
                 GameObject enemy = Instantiate(enemyObject, StageManager.Instance.warps[0].position, 
                     Quaternion.Euler(0, StageManager.Instance.warps[0].parent.eulerAngles.y, 0));
                 enemy.transform.SetParent(transform);
-                enemy.GetComponent<Enemy>().maxHealth = health;
-                enemy.GetComponent<Enemy>().health = health;
+                enemy.GetComponent<Enemy>().maxHealth = health * StageManager.Instance.healthRate;
+                enemy.GetComponent<Enemy>().health = health * StageManager.Instance.healthRate;
             }
             isAllSpawn = true;
         }

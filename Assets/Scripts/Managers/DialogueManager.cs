@@ -98,7 +98,7 @@ namespace Manager
             foreach (char letter in sentence.ToCharArray())
             {
                 dialogueText.text += letter;
-                yield return new WaitForSeconds(0.001f);
+                yield return new WaitForSeconds(0.02f);
             }
             if (sentences.Count == 12 || sentences.Count == 9)
                 BlockManager.Instance.clickAble = true;

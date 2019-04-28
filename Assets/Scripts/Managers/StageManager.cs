@@ -16,7 +16,7 @@ namespace Manager
         public Stage[] stages;
         public Transform[] spawnPositionsA;
         public Transform[] spawnPositionsB;
-        
+        public float healthRate = 1f;
         public Transform[] warps;
         void Start()
         {
@@ -25,6 +25,8 @@ namespace Manager
 
         void Initialize()
         {
+            if (ModeManager.Instance.isEasyMode)
+                healthRate = 0.8f;
             SetWarpTrigger();
             ReviseStage();
             EventManager.Instance.onClearLevel += SetRandomPosition;
