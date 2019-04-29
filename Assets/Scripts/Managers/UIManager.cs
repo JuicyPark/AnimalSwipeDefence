@@ -37,7 +37,6 @@ namespace Manager
 
         void Initialize()
         {
-            Screen.SetResolution(720, 1280, true);
             if (ModeManager.Instance.isEasyMode)
                 _easymodePanel.SetActive(true);
             if (PlayerPrefs.GetInt("Clear").Equals(1))
@@ -111,7 +110,7 @@ namespace Manager
 
         public void OnAccelationButton()
         {
-            if (Time.timeScale.Equals(1f))
+            if (Time.timeScale.Equals(1.2f))
             {
                 Time.timeScale = acceleration;
                 _accelerationText.text = "-";

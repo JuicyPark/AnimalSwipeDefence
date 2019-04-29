@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6332320f5be99e428bca66cd5fd122c
+guid: 44d3b2795f6835143ab1710c88ac3496
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,6 @@ ModelImporter:
     400000: Ground
     400002: //RootNode
     2100000: palette
-    2100002: GroundMat
     2300000: Ground
     3300000: Ground
     4300000: Ground

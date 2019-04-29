@@ -317,9 +317,9 @@ MonoBehaviour:
   _cameraAnimator: {fileID: 519420030}
   _bottomPanelAnimator: {fileID: 1393912726}
   _lifeBar: {fileID: 1595180142}
-  level: 0
+  level: 39
   resource: 20
-  priceAnimal: 5
+  priceAnimal: 0
   rewardResource: 15
   walk: 15
   priceWalk: 1
@@ -58795,7 +58795,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6332320f5be99e428bca66cd5fd122c, type: 3}
+  - {fileID: 2100000, guid: 8a50a7bb5af44b747ab77ceac645ed70, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

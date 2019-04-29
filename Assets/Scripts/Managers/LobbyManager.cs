@@ -21,6 +21,7 @@ namespace Manager
 
         void Start()
         {
+            Screen.SetResolution(720, 1280, true);
             Time.timeScale = 1.2f;
             StartCoroutine(CRandomJump());
         }
