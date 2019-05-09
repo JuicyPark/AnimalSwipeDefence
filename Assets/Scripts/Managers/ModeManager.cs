@@ -7,6 +7,6 @@ namespace Manager
 {
     public class ModeManager : PersistentSingleton<ModeManager>
     {
-        public bool isEasyMode;
+        public int modeLevel;
     }
 }

@@ -317,9 +317,9 @@ MonoBehaviour:
   _cameraAnimator: {fileID: 519420030}
   _bottomPanelAnimator: {fileID: 1393912726}
   _lifeBar: {fileID: 1595180142}
-  level: 39
+  level: 0
   resource: 20
-  priceAnimal: 0
+  priceAnimal: 5
   rewardResource: 15
   walk: 15
   priceWalk: 1
@@ -1160,6 +1160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpDelay: 0.5
   warpIndex: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+  infinityValue: 50
   stages:
   - {fileID: 737806589}
   - {fileID: 255026857}
@@ -2308,9 +2309,9 @@ MonoBehaviour:
   - {fileID: 1980817666}
   _reverseButton: {fileID: 133238642}
   _exitPanel: {fileID: 1702657491}
-  _easymodePanel: {fileID: 1700320057}
+  _modePanel: {fileID: 1700320057}
   _accelerationPanel: {fileID: 1972861945}
-  acceleration: 1.5
+  acceleration: 2.2
   _transitionPanelAnimator: {fileID: 1912585613}
 --- !u!4 &211421270
 Transform:
@@ -2550,7 +2551,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 140
+  health: 150
   delayTime: 1
 --- !u!1 &276567415
 GameObject:
@@ -4324,7 +4325,7 @@ MonoBehaviour:
   enemyObject: {fileID: 3373420167933698606, guid: d7fffdf16d1a4224394172d3d38dd8f5,
     type: 3}
   enemyNumber: 1
-  health: 11500
+  health: 11100
   delayTime: 1
 --- !u!1 &471986207
 GameObject:
@@ -5801,7 +5802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7237,7 +7238,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 80
+  health: 90
   delayTime: 1
 --- !u!1 &740576522
 GameObject:
@@ -9411,7 +9412,7 @@ MonoBehaviour:
   enemyObject: {fileID: 6538282435275253127, guid: 6fdfb81106b80284c8c76c74a87fb515,
     type: 3}
   enemyNumber: 1
-  health: 21500
+  health: 21300
   delayTime: 1
 --- !u!1 &985304807
 GameObject:
@@ -9518,7 +9519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15510,7 +15511,7 @@ MonoBehaviour:
   enemyObject: {fileID: 6251455962072421813, guid: 9713e8bbdd8349444a60a4c88b4ab758,
     type: 3}
   enemyNumber: 1
-  health: 8000
+  health: 7600
   delayTime: 1
 --- !u!1 &1122098599
 GameObject:
@@ -16414,7 +16415,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1558797224160913227, guid: 284ff0e336fe1c44a906163905e099c7,
     type: 3}
   enemyNumber: 20
-  health: 190
+  health: 200
   delayTime: 1
 --- !u!4 &1230393674
 Transform:
@@ -26447,7 +26448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1700320058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26464,7 +26465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 8.800049, y: 13.899994}
+  m_AnchoredPosition: {x: 32.2, y: 19}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1700320059
@@ -26494,7 +26495,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -32132,7 +32133,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1495671510667016005, guid: bbc3a60cdfa40da49b671ddf4e56bdb0,
     type: 3}
   enemyNumber: 1
-  health: 4000
+  health: 3750
   delayTime: 1
 --- !u!4 &1805880596
 Transform:

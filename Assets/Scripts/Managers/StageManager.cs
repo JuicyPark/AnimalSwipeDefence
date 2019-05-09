@@ -12,7 +12,7 @@ namespace Manager
 
         [SerializeField] float warpDelay = 1f;
         [SerializeField] int[] warpIndex;
-
+        [SerializeField] int infinityValue = 50;
         public Stage[] stages;
         public Transform[] spawnPositionsA;
         public Transform[] spawnPositionsB;
@@ -25,14 +25,24 @@ namespace Manager
 
         void Initialize()
         {
-            if (ModeManager.Instance.isEasyMode)
+            if (ModeManager.Instance.modeLevel == 0)
                 healthRate = 0.8f;
+            if (ModeManager.Instance.modeLevel == 2)
+                healthRate = 1.2f;
+
             SetWarpTrigger();
             ReviseStage();
             EventManager.Instance.onClearLevel += SetRandomPosition;
             EventManager.Instance.onClearLevel += SetWarpTrigger;
-            EventManager.Instance.onClearLevel += ReviseStage;
             EventManager.Instance.onStartLevel += StartStageTrigger;
+            EventManager.Instance.onClearLevel += ReviseStage;
+
+            if(ModeManager.Instance.modeLevel==3)
+            {
+                SetRandomPosition();
+                EventManager.Instance.onClearLevel -= ReviseStage;
+                EventManager.Instance.onClearLevel += ReviseStage_Infinity;
+            }
         }
 
         public void SetRandomPosition()
@@ -74,6 +84,11 @@ namespace Manager
         }
         void ReviseStage()=> currentStage = LevelManager.Instance.level;
 
+        void ReviseStage_Infinity()
+        {
+            currentStage = 0;
+            stages[currentStage].health += infinityValue;
+        }
         IEnumerator CSetWarpTrigger()
         {
             for (int i = 0; i < warps.Length; i++)

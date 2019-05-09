@@ -25,19 +25,34 @@ namespace Manager
             Time.timeScale = 1.2f;
             StartCoroutine(CRandomJump());
         }
-
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                OnExitButton();
+        }
         public void OnEasyButton()
         {
-            ModeManager.Instance.isEasyMode = true;
-            LoadToGameScene();
+            ModeManager.Instance.modeLevel = 0;
+            LoadToSpeedScene();
+        }
+        public void OnNormalButton()
+        {
+            ModeManager.Instance.modeLevel = 1;
+            LoadToSpeedScene();
         }
         public void OnHardButton()
         {
-            ModeManager.Instance.isEasyMode = false;
-            LoadToGameScene();
+            ModeManager.Instance.modeLevel = 2;
+            LoadToSpeedScene();
+        }
+        public void OnInfinityButton()
+        {
+            ModeManager.Instance.modeLevel = 3;
+            LoadToInfinityScene();
         }
         public void OnExitButton() => Application.Quit();
-        void LoadToGameScene() => _transition.SetTrigger("isClose");
+        void LoadToSpeedScene() => _transition.SetTrigger("GoToSpeed");
+        void LoadToInfinityScene() => _transition.SetTrigger("GoToInfinity");
 
         IEnumerator CRandomJump()
         {

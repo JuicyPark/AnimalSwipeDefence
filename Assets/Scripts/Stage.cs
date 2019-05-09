@@ -12,7 +12,7 @@ namespace InGame
         [Header("적 정보")]
         [SerializeField] GameObject enemyObject;
         [SerializeField] int enemyNumber;
-        [SerializeField] float health;
+        public float health;
         [Header("스폰 딜레이 시간")]
         [SerializeField] float delayTime;
 

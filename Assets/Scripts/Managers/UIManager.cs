@@ -25,27 +25,25 @@ namespace Manager
         [SerializeField] GameObject[] grounds;
         [SerializeField] GameObject _reverseButton;
         [SerializeField] GameObject _exitPanel;
-        [SerializeField] GameObject _easymodePanel;
+        [SerializeField] GameObject _modePanel;
 
         [SerializeField] GameObject _accelerationPanel;
-        [SerializeField] float acceleration = 2f;
+        [SerializeField] float acceleration = 2.2f;
         public Animator _transitionPanelAnimator;
         void Start()
         {
             Initialize();
         }
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                OnExitButton();
+        }
+
         void Initialize()
         {
-            if (ModeManager.Instance.isEasyMode)
-                _easymodePanel.SetActive(true);
-            if (PlayerPrefs.GetInt("Clear").Equals(1))
-                _accelerationPanel.SetActive(true);
-
-            ReviseLevelUI();
-            ReviseResourceUI();
-            ReviseWalkUI();
-            ReviseGround();
+            Time.timeScale = 1.2f;
 
             EventManager.Instance.onClearLevel += ReviseLevelUI;
             EventManager.Instance.onClearLevel += ReviseResourceUI;
@@ -60,15 +58,50 @@ namespace Manager
             EventManager.Instance.onStartLevel += DisableReverseButton;
             EventManager.Instance.onWarpSetting += ReviseReverse;
             EventManager.Instance.onLose += AnimateStageLose;
+
+            ReviseResourceUI();
+            ReviseWalkUI();
+            ReviseGround();
+
+            if (PlayerPrefs.GetInt("Clear").Equals(1))
+                _accelerationPanel.SetActive(true);
+
+            if (ModeManager.Instance.modeLevel == 0)
+            {
+                _modePanel.GetComponent<Text>().text = "EASY MODE";
+            }
+            else if (ModeManager.Instance.modeLevel == 1)
+            {
+                _modePanel.GetComponent<Text>().text = "NORMAL MODE";
+            }
+            else if (ModeManager.Instance.modeLevel == 2)
+            {
+                _modePanel.GetComponent<Text>().text = "HARD MODE";
+            }
+            else if (ModeManager.Instance.modeLevel == 3)
+            {
+                _modePanel.GetComponent<Text>().text = "INFINITY MODE";
+                EventManager.Instance.onClearLevel -= ReviseLevelUI;
+                EventManager.Instance.onClearLevel += ReviseLevelUI_Infinity;
+                return;
+            }
+            ReviseLevelUI();
         }
 
         public void ExitScene() => SceneManager.LoadScene(0);
-        public void RetryScene() => SceneManager.LoadScene(1);
+        public void RetryScene()
+        {
+            if (ModeManager.Instance.modeLevel == 3)
+                SceneManager.LoadScene(2);
+            else
+                SceneManager.LoadScene(1);
+        }
         void ReviseLevelUI()
         {
             levelText.text = "<color=black>Lv.</color> " + (LevelManager.Instance.level + 1).ToString();
             levelImage.sprite = enemySprites[LevelManager.Instance.level];
         }
+        void ReviseLevelUI_Infinity()=>levelText.text = "<color=black>Lv.</color> " + (LevelManager.Instance.level + 1).ToString();
         void ReviseResourceUI() => resourceText.text = LevelManager.Instance.resource.ToString() + "<color=yellow>G</color>";
         void ReviseWalkUI() => walkText.text = LevelManager.Instance.walk.ToString() + "/" + LevelManager.Instance.maxWalk.ToString();
         void ReviseReverse()
@@ -81,6 +114,7 @@ namespace Manager
         public void AnimateStageClear() => _stageClearAnimator.SetTrigger("isOpen");
         public void AnimateStageLose() => _transitionPanelAnimator.SetTrigger("isClose");
         public void DisableReverseButton() => _reverseButton.SetActive(false);
+
         public void OnReverseButton()
         {
             DisableReverseButton();

@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 236178a0a661029468f6f53020a5d04f
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Speed.unity
     guid: a02564fff20dc4f4daaf5c5d7feae6fe
+  - enabled: 1
+    path: Assets/Scenes/Infinity.unity
+    guid: 529e38d73d8c5784c8d911499d478e38
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: f1630d6a220100741815fe1dc70d6a48

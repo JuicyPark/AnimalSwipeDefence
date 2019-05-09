@@ -25,7 +25,7 @@ namespace Manager
         public int walk = 10;
         public int priceWalk = 1;
         public int rewardWalk = 10;
-        public int maxWalk = 20;
+        public int maxWalk = 15;
 
         [Header("재배치")]
         public int reverse = 5;
@@ -43,6 +43,9 @@ namespace Manager
 
         void Initialize()
         {
+            if (ModeManager.Instance.modeLevel==2)
+                maxWalk = 15;
+
             EventManager.Instance.onClearLevel += IncreaseLevel;
             EventManager.Instance.onClearLevel += IncreaseResource;
             EventManager.Instance.onClearLevel += IncreaseWalk;
