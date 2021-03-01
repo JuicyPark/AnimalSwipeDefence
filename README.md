@@ -38,7 +38,7 @@
 
 ## 개발 상세 내용
 
-#### (🙀해당부분은 리펙토링 레파지토리에서 진행한 작업임🙀)
+#### (🙀해당부분은 리펙토링 레파지토리에서 진행한 작업임🙀 https://github.com/JuicyPark/ASD_Refactoring)
 
 **Managers**
 
