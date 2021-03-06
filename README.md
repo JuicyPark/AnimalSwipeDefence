@@ -1,5 +1,6 @@
 # 🐶Animal Swipe Defence🐱
 
+다운로드링크 : https://play.google.com/store/apps/details?id=com.dontcryjunsu.asd
 ![0](https://user-images.githubusercontent.com/31693348/81091380-1f0c5b00-8f3a-11ea-9ef4-57be6bfa1ccc.png)
 
 
