@@ -1,6 +1,7 @@
+다운로드링크 : https://play.google.com/store/apps/details?id=com.dontcryjunsu.asd
+
 # 🐶Animal Swipe Defence🐱
 
-다운로드링크 : https://play.google.com/store/apps/details?id=com.dontcryjunsu.asd
 ![0](https://user-images.githubusercontent.com/31693348/81091380-1f0c5b00-8f3a-11ea-9ef4-57be6bfa1ccc.png)
 
 
@@ -11,7 +12,7 @@
 
 단순히 유닛을 설치만 하는 다른 디펜스 게임들과 달리, 매 스테이지 동물들의 배치를 신경 써야하는 디펜스/퍼즐 게임입니다. 같은 동물 조합이더라도 배치에 따라 결과는 크게 갈립니다.
 
-
+***
 
 ## 개발
 
@@ -33,38 +34,33 @@
     - 재배치
   - Sound
 
-  
+***
 
+## Optimize
 
+#### 1. Sprite Atlas
 
-## 개발 상세 내용
+단순히 스프라이트들을 Atlas에 집어넣기만 했는데도 Batch수가 상당히 줄어들었다.단 이미지 규격을 잘맞추지 않으면 Start의 칼이미지 처럼 깨져보이는 이미지들이 보였다.
 
-#### (🙀해당부분은 리펙토링 레파지토리에서 진행한 작업임🙀 https://github.com/JuicyPark/ASD_Refactoring)
+![image](https://user-images.githubusercontent.com/31693348/109277152-42521f00-785a-11eb-9aeb-f7b7aebae784.png)
 
-**Managers**
+***
 
-![1](https://user-images.githubusercontent.com/31693348/81091324-08660400-8f3a-11ea-9f4c-0d1987a90b1e.png)
+#### 2. Sorting Order
 
-[delegate Action을 이용한 Manager간 의존성 완화](https://github.com/JuicyPark/ASD_Refactoring/tree/develop/Assets/Scripts/Manager)
+BlankBox와 Dot만 찍어놓은 화면인데 Batches가 33이나 된다. 분명 같은 스프라이트를 사용하면 드로우콜이 증가하지 않을텐데 이상하게 생각했다.
 
-GameManager가 다양한 Manager에서 발생하는 이벤트들을 서로 매핑시켜주어 Manager간 의존을 낮춤
+![image](https://user-images.githubusercontent.com/31693348/109477481-6c564c00-7abb-11eb-859f-c706efa2960b.png)
 
+프레임디버거를 이용해서 확인해보니 이상하게 Dot이 찍힐때도 있고 BlankBox가 찍힐때도 있는걸 확인할 수 있었다. 
 
+![image](https://user-images.githubusercontent.com/31693348/109477922-f56d8300-7abb-11eb-91a5-63b48821ba84.png)
 
-**Stage Data**
+따로 찍어보면 예상과같이 Batches가 1씩 찍힌다.
 
-![2](https://user-images.githubusercontent.com/31693348/81091360-14ea5c80-8f3a-11ea-933b-19aa11757878.png)
+![image](https://user-images.githubusercontent.com/31693348/109478095-2948a880-7abc-11eb-8494-5561e135bf05.png)
 
-[ScriptableObject를 이용하여 Stage 생성](https://github.com/JuicyPark/ASD_Refactoring/blob/develop/Assets/Scripts/Data/EnemyData.cs)
+문제는 생각보다 쉽게 해결했다. 왠지 둘의 Order in Layer가 겹쳐서 그렇지 않을까 생각했는데 예상이 적중하였다!
 
-스테이지들을  ScriptableObject로 만들어 두어 수정 및 관리가 용이합니다. 이 데이터들은 StageManager에서 해당 레벨에 맞는 Stage Enemy들을 불러와줍니다.
+![](https://user-images.githubusercontent.com/31693348/109478243-572ded00-7abc-11eb-90f9-b0d685997fa8.png)
 
-
-
-**Unit, Enemy**
-
-![6](https://user-images.githubusercontent.com/31693348/81091402-27649600-8f3a-11ea-9bd5-34b3e390a029.png)
-
-[플레이어가 생성하는 Unit](https://github.com/JuicyPark/ASD_Refactoring/blob/develop/Assets/Scripts/Unit.cs)
-
-[스테이지에 등장하는 Enemy](https://github.com/JuicyPark/ASD_Refactoring/blob/develop/Assets/Scripts/Enemy.cs)
