@@ -40,19 +40,19 @@ namespace Manager
         void DragBlock()
         {
             // Drag.Began
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            if (Input.GetMouseButtonDown(0))
             {
-                startTouch = Input.GetTouch(0).position;
+                startTouch = Input.mousePosition;
                 SelectBlock();
             }
 
             // Drag.Ended
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+            if (Input.GetMouseButtonUp(0))
             {
                 if (selectBlock == null)
                     return;
 
-                endTouch = Input.GetTouch(0).position;
+                endTouch = Input.mousePosition;
                 if (currentDirection.Equals(Direction.None))
                 {
                     if ((endTouch.x - startTouch.x > touchSenstive || endTouch.x - startTouch.x <= -touchSenstive))
