@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Service;
 using InGame;
+using UnityEngine.AddressableAssets;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Manager
 {
@@ -31,6 +35,11 @@ namespace Manager
         public int dogNumber = -1;
         public int bearNumber = -1;
         public bool clickAble = true;
+
+        private void Start()
+        {
+            Addressables.DownloadDependenciesAsync("Level1/Cat.prefab");
+        }
 
         void Update()
         {
@@ -199,11 +208,32 @@ namespace Manager
             }
         }
 
+
+        Dictionary<int, Animal> animals = new Dictionary<int, Animal>();
+
         public void AnimalSpawn()
         {
             for (int i = 0; i < animalBlock.Count; i++)
             {
-                animalObject.Enqueue(Instantiate(AnimalInformation.Instance.level[animalBlock[i].animalLevel].animalObject[animalBlock[i].animalIndex]
+                int level = animalBlock[i].animalLevel;
+                int index = animalBlock[i].animalIndex;
+
+                Animal animalAsset;
+
+                if (animals.ContainsKey(level*100 + index))
+                {
+                    animalAsset = animals[level*100 + index];
+                }
+                else
+                {
+                    var handle = Addressables.LoadAssetAsync<GameObject>(AnimalInformation.Instance.level[level].animalObject[index]);
+                    var animal = handle.WaitForCompletion().GetComponent<Animal>();
+                    animals[level * 100 + index] = animal;
+
+                    animalAsset = animal;
+                }
+
+                animalObject.Enqueue(Instantiate(animalAsset.gameObject
                         , new Vector3(animalBlock[i].positionX, 0, animalBlock[i].positionY), Quaternion.identity));
             }
         }

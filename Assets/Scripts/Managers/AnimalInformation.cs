@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Service;
+using UnityEngine.AddressableAssets;
 
 namespace Manager
 {
@@ -9,7 +8,7 @@ namespace Manager
     public class Level
     {
         public Sprite[] animalSprite;
-        public GameObject[] animalObject;
+        public AssetReference[] animalObject;
     }
     public class AnimalInformation : Singleton<AnimalInformation>
     {

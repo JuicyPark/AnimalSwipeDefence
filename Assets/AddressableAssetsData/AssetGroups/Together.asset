@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Together
+  m_EditorClassIdentifier: 
+  m_GroupName: Together
+  m_Data:
+    m_SerializedData: []
+  m_GUID: abb4af391d3f0a340af665e30d2d2a29
+  m_SerializeEntries:
+  - m_GUID: fde371bf4867ad144826ddf075216157
+    m_Address: Level1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 52eb6a4c5bd28c34dbdffd0d2feb2960
+    m_Address: Level4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6edc1977013d856418f01929d4f306c2
+    m_Address: Level1/Rabbit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63d2db9b6d8e84d4b8c8f23425a6abaa
+    m_Address: Level3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2fe06d873ab651249b2671f033bb7fb1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 99321f5444010204baf7e3123da0269d, type: 2}
+    - {fileID: 11400000, guid: 4ead0ee30a37ae8439b66b4584831a90, type: 2}
