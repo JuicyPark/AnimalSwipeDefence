@@ -21,8 +21,8 @@ MonoBehaviour:
     m_Address: Level1
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 52eb6a4c5bd28c34dbdffd0d2feb2960
-    m_Address: Level4
+  - m_GUID: 20fe835a35a2e5a46a8571718c762f29
+    m_Address: Level2/Monkey.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6edc1977013d856418f01929d4f306c2
@@ -31,6 +31,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 63d2db9b6d8e84d4b8c8f23425a6abaa
     m_Address: Level3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 446f3ad83e5bdd94b9ce94a66bfe16fc
+    m_Address: Level2/Biber.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 62961b82582134b4e85b9d8860d2c8a2
+    m_Address: Level2/Penguin.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

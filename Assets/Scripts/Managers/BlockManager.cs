@@ -36,10 +36,10 @@ namespace Manager
         public int bearNumber = -1;
         public bool clickAble = true;
 
-        private void Start()
-        {
-            Addressables.DownloadDependenciesAsync("Level1/Cat.prefab");
-        }
+        //private void Start()
+        //{
+        //    Addressables.ClearDependencyCacheAsync("Level1/Carp.prefab");
+        //}
 
         void Update()
         {

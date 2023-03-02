@@ -34,9 +34,9 @@ MonoBehaviour:
   m_MonoScriptBundleNaming: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 419131f049376da4ea3dba37619ed9c6
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: e0b55de9cb56e7c4da82ef0e3b44d980
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
@@ -44,8 +44,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6acb3d26df3db9c4284b9fcd3e8c9898, type: 2}
   - {fileID: 11400000, guid: 17ee84309dd9d7f4b92a5fb0c705cedd, type: 2}
   - {fileID: 11400000, guid: 7ce60051136bbb74a914e3ce2c5485da, type: 2}
-  - {fileID: 11400000, guid: acb1b54b8f9f5ba4db0136553edf800e, type: 2}
-  - {fileID: 11400000, guid: 23f6450843bbc0540b803cdab01742ed, type: 2}
+  - {fileID: 11400000, guid: bd4aa661334229e4faa4c0f369a266ce, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -80,7 +79,7 @@ MonoBehaviour:
       - m_Id: 419131f049376da4ea3dba37619ed9c6
         m_Value: ServerData/[BuildTarget]
       - m_Id: e0b55de9cb56e7c4da82ef0e3b44d980
-        m_Value: https://66e2c5e5-e0ae-4292-ad49-1ebee877e37c.client-api.unity3dusercontent.com/client_api/v1/environments/develop/buckets/8dc28e7d-76e5-4599-9e7a-98b2e2111aec/releases/6783d1c2-a041-4b45-afde-a2584d00e12d/entry_by_path/content/?path=
+        m_Value: https://66e2c5e5-e0ae-4292-ad49-1ebee877e37c.client-api.unity3dusercontent.com/client_api/v1/environments/develop/buckets/8dc28e7d-76e5-4599-9e7a-98b2e2111aec/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: dadcbc3a2bfa8da4392a8aa5b78b9640
       m_Name: BuildTarget

@@ -15,27 +15,24 @@ MonoBehaviour:
   m_GroupName: Seperate
   m_Data:
     m_SerializedData: []
-  m_GUID: b5dafdbf5dd2eb64686de73656e87e34
+  m_GUID: ff18372a6d819a04c8c02e7aaf18c1c6
   m_SerializeEntries:
   - m_GUID: 70275fc9a246c364d9127997551fa578
     m_Address: Level2
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 446f3ad83e5bdd94b9ce94a66bfe16fc
-    m_Address: Level2/Biber.prefab
+  - m_GUID: 52eb6a4c5bd28c34dbdffd0d2feb2960
+    m_Address: Level4
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 20fe835a35a2e5a46a8571718c762f29
-    m_Address: Level2/Monkey.prefab
+  - m_GUID: 6c88270550b5ffd47b4388beaf64c753
+    m_Address: Level5
     m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 62961b82582134b4e85b9d8860d2c8a2
-    m_Address: Level2/Penguin.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Lv5
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2fe06d873ab651249b2671f033bb7fb1, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 3a62669693e57904f92137a7ad6ef040, type: 2}
-    - {fileID: 11400000, guid: 6daf4f10d5e720e43974bdef3828652d, type: 2}
+    - {fileID: 11400000, guid: 6609af852e156cb409c909d6020d679e, type: 2}
+    - {fileID: 11400000, guid: 576199a032cba234891800853474c8fa, type: 2}
